@@ -1,0 +1,25 @@
+
+\section{Introduction}
+\noindent
+\citet{Lacasa2008} presented a simple and fast computational method; known as visibility algorithm, to convert the time series into the graphs. Basically the visibility graph presents the connection between nodes in the network. In each time series two characteristics are attributed to each incidents, including the time and the value of the incident. Two events are connected to each other, or visible to each other, if there is not any other event to interrupt their linear connection. In mathematical form, event $i$ and event $j$ are visible to each other if the following equation fulfills:
+
+\begin{equation}
+\frac{y_i - y_k }{t_k - t_i} > \frac{y_i - y_j}{ t_j - t_i} 
+\end{equation}
+
+\noindent
+where, $y$ is the value of the event and $t$ is the time of the event. $k$ is the index of any event between event $i$ and event $j$. 
+
+\noindent
+The visibility graph that is generated from the time series holds the following conditions, 1) each event is visible to the events at the right and left side (if there is any) of the event  (Connectivity), 2) The algorithm is developed without defining a direction for the links (Undirected),  3) Rescaling or translation of the time series are not changing the resulted visibility graph (Invariant under affine transformations of  the series data)\citep{Lacasa2008}.
+
+\noindent
+The analysis of seismicity sequence through visibility graph for various tectonic seismic regions, revealed an alternative approach to study the magnitude time series. \citet{Telesca2012} studied the seismic sequence of Italy between 2005 and 2010 through using the visibility graph method. Using different threshold magnitude, and observing the collapsing effect of all the distribution degrees, they argued that in analyzing the magnitude time series, VG seems to depend only on the values of the magnitude and independent of the threshold magnitude. In other study, \citet{Telesca2013} studied the Seismicity of the Mexican subduction zone through visibility graph approach. They extracted the characteristics of the visibility graph for five different tectonic seismic regions.  According to their study visibility graph could identify one of the regions that has a different seismicity characteristics, which is because of different tectonic processes that governs the area. The relationship between Gutenberg-Richter parameters and $k-M$ slope (The slope of regression line of Magnitude  of each event $(M)$ and its connectivity degree $k$) is investigated in their study. In a similar study \citet{Telesca2014}, studied the seismicity of 2002-2011 Pannonian seismicity using the visibility graph. They classified seismic catalog into shallow and deep earthquakes and extract the visibility graph characteristics for each class. According to their study there is close relationship between Gutenberg-Richter $b-value$ and $k-M$ slope of the visibility graph. High linear correlation coefficient of $b-value$ and $k-M$ slope suggests the universal character of the relationship between these parameters \citep{Telesca2014}.  \citet{Telesca2016} , used the $ <T_C>$, as the parameter window mean interval connectivity time ,  that indicates the mean linkage time between earthquakes, to study the 2003-2012 earthquake sequences in the Kachchh region of western India. They found that the $<T_C>$ changes through time, indicating that the topological properties of the earthquake network are not stationary; also $<T_C>$ significantly decrees before the largest shock of the catalog. Analyzing Gutenberg-Richter values of  magnitude time series of an earthquake sequence revealed more opportunities to study the magnitude time series using the features of networks. \\
+
+\noindent
+In this study we used visibility graph analysis to study the earthquake sequence of northern Iran. We divided northern Iran into three tectonic seismic regions including Azerbaijan, Alborz, and Kopeh Dagh.  Recently, northern Iran has been studied in detail from different seismological points of view. \citet{Nemati2015} studied the most recent 200 years' seismicity in northern Iran. The frequency of shocks vary widely from one main shock per 6 years (0.17 event/ year) for the Azerbaijan region to 13 earthquakes per 4 years for the Kopeh-Dagh (3.25 event/year) region. \\
+
+\noindent
+Northern Iran has an elaborate seismic history.  Having considerable number of earthquake and also being in different seismic tectonic zone, northern Iran is a good platform to analysis the visibility graph method's capabilities for studying the magnitude time series. In this study we present the relationship between $K-M$ slope and the $b-value$ in three different tectonic seismic region. We also investigate the variation of $<T_C>$ value through time.
+
+
