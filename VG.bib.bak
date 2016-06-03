@@ -68,11 +68,13 @@
 }
 
 @Article{Aki1965,
-  Title                    = {17. Maximum likelihood estimate of b in the formula logN= a-bM and its confidence limits},
+  Title                    = {Maximum likelihood estimate of b in the formula logN= a-bM and its confidence limits},
   Author                   = {Aki, Keiiti},
+  Journal                  = {Bull. Earthq. Res.Inst. Tokyo Univ.},
   Year                     = {1965},
+  Pages                    = {237-239},
+  Volume                   = {43},
 
-  __markedentry            = {[naeem:6]},
   Owner                    = {naeem},
   Publisher                = { },
   Timestamp                = {2016.05.25}
@@ -333,6 +335,19 @@
   Timestamp                = {2016.01.10}
 }
 
+@Article{Chan2012,
+  Title                    = {Spatial and temporal evolution of b-values before large earthquakes in Taiwan},
+  Author                   = {Chan, Chung-Han and Wu, Yih-Min and Tseng, Tai-Lin and Lin, Ting-Li and Chen, Chien-Chih},
+  Journal                  = {Tectonophysics},
+  Year                     = {2012},
+  Pages                    = {215--222},
+  Volume                   = {532},
+
+  Owner                    = {naeem},
+  Publisher                = {Elsevier},
+  Timestamp                = {2016.05.25}
+}
+
 @Article{Chiou2008,
   Title                    = {An NGA model for the average horizontal component of peak ground motion and response spectra},
   Author                   = {Chiou, BrianS-J and Youngs, Robert R},
@@ -571,7 +586,7 @@
 @Electronic{IIEES,
   Title                    = {Earthquake Catalogue Search},
   Author                   = {IIEES},
-  Note                     = {http://www.iiees.ac.ir/en/eqcatalog/, Accessed June 24, 2015},
+  Note                     = {http://www.iiees.ac.ir/en/eqcatalog/, Accessed December 29},
   Year                     = {2015},
 
   Owner                    = {naeem},
@@ -846,16 +861,16 @@
 }
 
 @Article{Nemati2015,
-  Title                    = {Intermediate-term variations in 200 years seismicity of {S}outh of {I}ran},
+  Title                    = {Intermediate-term variations in 200 years seismicity of south of Iran},
   Author                   = {Nemati, Majid},
   Journal                  = {Geomatics, Natural Hazards and Risk},
   Year                     = {2015},
-  Number                   = {ahead-of-print},
   Pages                    = {1--16},
 
+  __markedentry            = {[naeem:6]},
   Owner                    = {naeem},
   Publisher                = {Taylor \& Francis},
-  Timestamp                = {2015.07.15}
+  Timestamp                = {2016.06.03}
 }
 
 @Article{Nowroozi1976,
@@ -936,6 +951,21 @@
   Owner                    = {naeem},
   Publisher                = {Seismological Society of America},
   Timestamp                = {2015.08.24}
+}
+
+@Article{Schorlemmer2005,
+  Title                    = {Variations in earthquake-size distribution across different stress regimes},
+  Author                   = {Schorlemmer, Danijel and Wiemer, Stefan and Wyss, Max},
+  Journal                  = {Nature},
+  Year                     = {2005},
+  Number                   = {7058},
+  Pages                    = {539--542},
+  Volume                   = {437},
+
+  __markedentry            = {[naeem:]},
+  Owner                    = {naeem},
+  Publisher                = {Nature Publishing Group},
+  Timestamp                = {2016.05.25}
 }
 
 @Article{Shahvar2013,
@@ -1023,7 +1053,6 @@
   Pages                    = {125--132},
   Volume                   = {173},
 
-  __markedentry            = {[naeem:]},
   Owner                    = {naeem},
   Publisher                = {Springer},
   Timestamp                = {2016.05.25}
@@ -1050,6 +1079,7 @@
   Year                     = {2014},
   Pages                    = {219--224},
   Volume                   = {416},
+
   Owner                    = {naeem},
   Publisher                = {Elsevier},
   Timestamp                = {2016.05.25}
@@ -1177,6 +1207,33 @@
   Owner                    = {naeem},
   Publisher                = {42/5},
   Timestamp                = {2015.07.15}
+}
+
+@Article{Wyss2000,
+  Title                    = {Mapping asperities by minima of local recurrence time: San Jacinto-Elsinore fault zones},
+  Author                   = {Wyss, Max and Schorlemmer, Danijel and Wiemer, Stefan},
+  Journal                  = {Journal of Geophysical Research: Solid Earth},
+  Year                     = {2000},
+  Number                   = {B4},
+  Pages                    = {7829--7844},
+  Volume                   = {105},
+
+  Owner                    = {naeem},
+  Publisher                = {Wiley Online Library},
+  Timestamp                = {2016.05.25}
+}
+
+@Article{Wyss2006,
+  Title                    = {Nucleation points of recent mainshocks in southern Iceland, mapped by b-values},
+  Author                   = {Wyss, Max and Stefansson, Ragnar},
+  Journal                  = {Bulletin of the Seismological Society of America},
+  Year                     = {2006},
+  Number                   = {2},
+  Pages                    = {599--608},
+  Volume                   = {96},
+  Owner                    = {naeem},
+  Publisher                = {Seismological Society of America},
+  Timestamp                = {2016.05.25}
 }
 
 @Article{Zafarani2014,
