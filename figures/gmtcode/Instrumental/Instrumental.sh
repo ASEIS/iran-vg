@@ -6,49 +6,68 @@
 
  
 
-LONMIN=43.5
-LONMAX=61.5
-LATMIN=34
-LATMAX=40
-REGION=$LONMIN/$LONMAX/$LATMIN/$LATMAX
-PROJ=-JM18
-MOREPS=-K
-CONTINUEPS="-K -O"
-ENDPS=-O
-DATASET=11
-DATAGRID=-I30c
-LINE=-W1
+rm gmt.conf gmt.history
 
-grdraster $DATASET -G$world.grd $DATAGRID -R$REGION -V
-CPTFILE=/usr/local/GMT4.5.7/share/cpt/GMT_globe.cpt
-TOPOILLUM=220
+# Set GMT constants
+# ------------------------------------------------------------------------------
 
-#grdgradient $world.grd -A$TOPOILLUM -GETOPO5.intns -N2 -V   in this case Dataset = 9
-grdgradient $world.grd -A$TOPOILLUM -GETOPO30s.intns -N2 -V
+gmt gmtset FONT                     8
 
-grdimage $world.grd -IETOPO5.intns -C$CPTFILE -R$REGION $PROJ -N1/4 -K -B4f2/4f2 -Y8 -X8  >  $0.ps
-
-pscoast -R$REGION $PROJ -N1/4 -B4f2/4f2 -K -O -W2 >> $0.ps
-
-
-awk '($7>2.8){print $9,$10,($7^2.5)/140}' Alborz_2005_all_mag.txt|psxy -Sc -G196/19/19 -W2  -R$REGION $PROJ -K -O >> $0.ps
-awk '($7>3.4){print $9,$10,($7^2.5)/140}' Azerbaijan_2005_all_mag.txt|psxy -Sc -G102/178/255 -W2  -R$REGION $PROJ -K -O >> $0.ps
-awk '($7>2.5){print $9,$10,($7^2.5)/140}' KopehDagh_2005_all_mag.txt|psxy -Sc -G160/160/160 -W2  -R$REGION $PROJ -K -O >> $0.ps
-
-cat << EOF |awk '{print $1,$2,($3^2.5)/140}' |psxy -Sc -G196/19/19 -W2  -R$REGION $PROJ -K -O >> $0.ps
+gmt gmtset MAP_DEFAULT_PEN          0.75p
+gmt gmtset MAP_FRAME_PEN            0.75p
+gmt gmtset MAP_FRAME_WIDTH          3p
+gmt gmtset MAP_TICK_PEN             0.75p
+gmt gmtset MAP_TICK_PEN_PRIMARY     0.75p
+gmt gmtset MAP_TICK_PEN_SECONDARY   0.75p
+gmt gmtset MAP_GRID_PEN_PRIMARY     0.75p
+gmt gmtset MAP_TICK_LENGTH_PRIMARY  6p/3p
+gmt gmtset MAP_LABEL_OFFSET         8p
+gmt gmtset MAP_ANNOT_OFFSET_PRIMARY 5p
 
 
 
+# Set script constants
+# ------------------------------------------------------------------------------
+
+OUTNAME=figure2
+PSNAME=${OUTNAME}.ps
+
+PROJ=-JM5i
+
+gmt grdgradient etopo1_bedrock.grd -A300 -Gmytopo.grad -Nt
+gmt grdhisteq mytopo.grad -Gmytopo.hist -N
+gmt grdmath mytopo.hist 3 DIV = mytopo.norm
+
+gmt psbasemap -R43.5/61.5/34/40 -JM5i  -B2f1/2f1 -Y8i -V -P -K > ${PSNAME}
+gmt grdimage etopo1_bedrock.grd -R -J -Bwnes  -Cetopo1.cpt -t20  -V -O -K >> ${PSNAME}
+gmt pscoast -R -J -B -Dh -W0.25p -N1/0.25p -A500 -V -P -O -K -Lf73/23/23/1000 >> ${PSNAME}
+gmt pscoast -R -J -B -Slightblue -A500 -Dh -W0.25p -V -P -O -K >> ${PSNAME}
+
+
+awk '($7>2.8){print $9,$10,($7^2.5)/140}' Alborz_2005_all_mag.txt|gmt psxy -Sc -G196/19/19 -W0.5  -R$REGION $PROJ -K -O >> ${PSNAME}
+awk '($7>3.4){print $9,$10,($7^2.5)/140}' Azerbaijan_2005_all_mag.txt|gmt psxy -Sc -G102/178/255 -W0.5  -R $PROJ -K -O >> ${PSNAME}
+awk '($7>2.5){print $9,$10,($7^2.5)/140}' KopehDagh_2005_all_mag.txt|gmt psxy -Sc -G0/153/0 -W0.5  -R $PROJ -K -O >> ${PSNAME}
+
+cat << EOF |awk '{print $1,$2,($3^2.5)/140}' |gmt psxy -Sc -G196/19/19 -W0.5  -R $PROJ -O >> ${PSNAME}
 61 37.7   3
 61 38.0   4
 61 38.2   5
 61 38.6   6
- 
- 
 EOF
 
 
+# Creating PDF
+# ------------------------------------------------------------------------------
 
+gmt ps2raster ${PSNAME} -Tf -Au0.25c
+rm ${PSNAME}
+rm data.txt
+rm mytopo.grad
+
+# Opening PDF
+# ------------------------------------------------------------------------------
+
+open -a Adobe\ Acrobat\ Pro.app ${OUTNAME}.pdf
 
 
 
