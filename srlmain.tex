@@ -9,11 +9,12 @@
 
 % OPTION 1: Manuscript Style
 
-%\documentclass[fleqn]{article}
+% \documentclass[fleqn]{article}
 
 % OPTION 2: Journal Style
 
 \documentclass[twocolumn,twoside,fleqn]{article}
+
 
 % ==============================================================================
 % ==============================================================================
@@ -23,8 +24,11 @@
 % ==============================================================================
 % ==============================================================================
 
-\usepackage{simplemargins}
 
+% PACKAGES
+% ------------------------------------------------------------------------------
+
+\usepackage{simplemargins}
 \usepackage{tocloft}
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
@@ -40,13 +44,25 @@
 \usepackage{subfig}
 \usepackage{balance}
 \usepackage{times}
-
 \usepackage[hang]{footmisc}
 
-\footnotemargin 1em
 
-\renewcommand{\rmdefault}{ugm}
-\renewcommand{\sfdefault}{phv}
+% MARGINS AND DIMENSIONS
+% ------------------------------------------------------------------------------
+
+\settopmargin{0.70in}
+\setleftmargin{0.55in}
+\setrightmargin{0.56in}
+\setbottommargin{1in}
+\addtolength{\oddsidemargin}{0.17in}
+\addtolength{\textwidth}{-0.17in}
+\footnotemargin 1em
+\setlength{\mathindent}{0in}
+\setlength{\parindent}{0.24in}
+
+
+% PDF FIGURES
+% ------------------------------------------------------------------------------
 
 \ifpdf
 	\usepackage{graphicx}
@@ -58,10 +74,16 @@
 	\usepackage[dvipdfm,bookmarks=false]{hyperref}
 \fi
 
-\clubpenalty=10000  % Orphan - First of paragraph left behind
-\widowpenalty=10000 % Widow  - Last of paragraph sent ahead
 
-\setlength{\mathindent}{0cm}
+% ORPHANS AND WIDOWS
+% ------------------------------------------------------------------------------
+
+\clubpenalty=10000
+\widowpenalty=10000
+
+
+% LINKS
+% ------------------------------------------------------------------------------
 
 \hypersetup{
     pdfpagelayout=OneColumn,
@@ -70,18 +92,20 @@
 	citecolor  = blue,
 	linkcolor  = blue
 }
-
 \urlstyle{same}
 
-\settopmargin{0.70in}
-\setleftmargin{0.55in}
-\setrightmargin{0.56in}
-\setbottommargin{1in}
-\addtolength{\oddsidemargin}{0.17in}
-\addtolength{\textwidth}{-0.17in}
+
+%  CAPTIONS
+% ------------------------------------------------------------------------------
 
 \captionsetup{font={footnotesize,sf},labelfont=bf}
 \captionsetup[subfloat]{font={scriptsize,sf},textfont=scriptsize}
+
+\newcommand{\sublabel}[2]{\raisebox{#1in}{\sffamily\scriptsize\bfseries(#2)}}
+
+
+% HEADERS AND FOOTS
+% ------------------------------------------------------------------------------
 
 \makeatletter
 \if@twocolumn
@@ -116,17 +140,100 @@
 \fi
 \makeatother
 
-\input{mycommands}
+
+% SECTION FORMATS COMMANDS
+% ------------------------------------------------------------------------------
+
+\titleformat{\section}{\raggedright}{}{0pt}{\usefont{T1}{phv}{bc}{n}\large\uppercase}
+\titlespacing*{\section}{0pt}{10pt}{10pt}
+
+\titleformat{\subsection}{\raggedright}{}{0pt}{\usefont{T1}{phv}{bc}{n}\normalsize}
+\titlespacing*{\subsection}{0pt}{10pt}{0pt}
+
+\renewcommand{\refname}{REFERENCES}
+
+
+% ADDITIONAL COMMANDS
+% ------------------------------------------------------------------------------
+
+% \input{mycommands}
+
+\newcommand\manuscriptadjust{
+\makeatletter
+\ifthenelse{\boolean{@twocolumn}}{}{~\clearpage}
+\makeatother
+}
+
+\newcommand\preprintadjust{
+\makeatletter
+\ifthenelse{\boolean{@twocolumn}}{\small}{}
+\makeatother
+}
+
+\newcommand{\myaffil}[1]{$^{\mbox{\small #1}}$}
+
+
+% TITLE AND AUTHORS PREPARATION
+% ------------------------------------------------------------------------------
+
+\pretitle{
+    \vspace{-30pt}
+    \begin{flushleft}
+    \usefont{T1}{phv}{bc}{it}
+    \Huge
+}
+
+\posttitle{
+    \end{flushleft}
+}
+
+\preauthor{
+    \begin{flushleft}
+    \vspace{3pt}
+    \usefont{T1}{phv}{bc}{n}
+    \LARGE
+}
+
+\postauthor{
+    \end{flushleft}
+    \vspace{0.3em}
+}
+
+\predate{
+    \begin{flushleft}
+    \makeatletter
+	\vspace{-3em}
+}
+
+\postdate{
+    \if@twocolumn
+    \else
+    	~\clearpage
+    \fi
+	\section{Abstract}
+	\vspace{-2.6em}
+    \end{flushleft}
+}
+
+% ==============================================================================
+% THE DOCUMENT
+% ==============================================================================
+
+
+% TITLE AND AUTHORS INPUT
+% ------------------------------------------------------------------------------
 
 \input{title-and-authors}
 
+
+% START DOCUMENT STRUCTURE
+% ------------------------------------------------------------------------------
+
 \begin{document}
 
-%\makeatletter
-%\if@isreview
-%    \input{review-control}
-%\fi
-%\makeatother
+
+% PAGE STYLE
+% ------------------------------------------------------------------------------
 
 \makeatletter
 \if@twocolumn
@@ -141,39 +248,38 @@
 \fi
 \makeatother
 
-% \makeatletter
-% \if@twocolumn
-%     \footnotetext[1]{Department of Civil and Environmental Engineering, Carnegie Mellon University, Pittsburgh, Pennsylvania, U.S.A.}
-%     \footnotetext[2]{Departmento de Ingenier\'{i}a Civil, Universidad EAFIT, Medell\'{i}n, Colombia}
-% \fi
-% \makeatother
+
+% ABSTRACT
+% ------------------------------------------------------------------------------
 
 \noindent
 \input{abstract}
 
+% ------------------------------------------------------------------------------
+
+
+\makeatletter
+\if@twocolumn
+    \vspace{2em}
+\fi
+\makeatother
+
+
+% MAIN CONTENT
+% ------------------------------------------------------------------------------
+
 \input{content}
+
+% ------------------------------------------------------------------------------
+
+
+% END-AUTHORS FOR TWO COLUMNS FORMAT
+% ------------------------------------------------------------------------------
 
 \makeatletter
 \if@twocolumn
     \vspace{3ex}
-    \noindent\raggedleft\it\bf
-	Naeem Khoshnevis\\
-	Center for Earthquake Research and Information\\
-	The University of Memphis\\
-	Memphis, TN 38152, U.S.A.\\
-	nkhshnvs@memphis.edu\\
-	\vspace{2ex}
-	Shima Azizzadeh-Roodpish\\
-	Ricardo Taborda\\
-	Department of Civil Engineering, and\\
-	Center for Earthquake Research and Information\\
-	The University of Memphis\\
-	Memphis, TN 38152, U.S.A.\\
-	\vspace{2ex}
-	Luciano Telesca\\
-	Institute of Methodologies for Environmental Analysis\\
-	National Research Council, Tito, Italy\\
-	\vspace{2ex}
+    \noindent\raggedleft\textit{\textbf{\input{twocolendauthors}}}
 \fi
 \makeatother
 
