@@ -1,0 +1,180 @@
+% ==============================================================================
+% ==============================================================================
+%
+%        CHOOSE ONE OPTION BY ALTERNATING THE COMMENTED-OUT LINE
+%           For the order of .tex files, open controller.tex
+%
+% ==============================================================================
+% ==============================================================================
+
+% OPTION 1: Manuscript Style
+
+%\documentclass[fleqn]{article}
+
+% OPTION 2: Journal Style
+
+\documentclass[twocolumn,twoside,fleqn]{article}
+
+% ==============================================================================
+% ==============================================================================
+%
+%                      DO NOT MODIFY BEYOND THIS POINT
+%
+% ==============================================================================
+% ==============================================================================
+
+\usepackage{simplemargins}
+
+\usepackage{tocloft}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{setspace}
+\usepackage[round,authoryear,semicolon]{natbib}
+\usepackage{ifthen}
+\usepackage{ifpdf}
+\usepackage{titling}
+\usepackage{titlesec}
+\usepackage{units}
+\usepackage{amsbsy}
+\usepackage{caption}
+\usepackage{subfig}
+\usepackage{balance}
+\usepackage{times}
+
+\usepackage[hang]{footmisc}
+
+\footnotemargin 1em
+
+\renewcommand{\rmdefault}{ugm}
+\renewcommand{\sfdefault}{phv}
+
+\ifpdf
+	\usepackage{graphicx}
+	\usepackage[pdftex,bookmarks=false]{hyperref}
+\else
+	\usepackage{graphics}
+	\usepackage{graphicx}
+	\usepackage{epsfig}
+	\usepackage[dvipdfm,bookmarks=false]{hyperref}
+\fi
+
+\clubpenalty=10000  % Orphan - First of paragraph left behind
+\widowpenalty=10000 % Widow  - Last of paragraph sent ahead
+
+\setlength{\mathindent}{0cm}
+
+\hypersetup{
+    pdfpagelayout=OneColumn,
+	colorlinks = true,
+	urlcolor   = blue,
+	citecolor  = blue,
+	linkcolor  = blue
+}
+
+\urlstyle{same}
+
+\settopmargin{0.70in}
+\setleftmargin{0.55in}
+\setrightmargin{0.56in}
+\setbottommargin{1in}
+\addtolength{\oddsidemargin}{0.17in}
+\addtolength{\textwidth}{-0.17in}
+
+\captionsetup{font={footnotesize,sf},labelfont=bf}
+\captionsetup[subfloat]{font={scriptsize,sf},textfont=scriptsize}
+
+\makeatletter
+\if@twocolumn
+    \usepackage{fancyhdr}
+	\setlength{\columnsep}{0.33in}
+	\renewcommand{\headrulewidth}{0pt}
+	\fancyhf{}
+    \fancyfoot[RO]{
+        \usefont{T1}{phv}{c}{n}\small
+        Seismological Research Letters \hspace{1em} Volume 00, Number 0 \hspace{1em} November/December 2012 \hspace{1em} \thepage}
+    \fancyfoot[LE]{
+        \usefont{T1}{phv}{sb}{n}\small
+        \thepage \hspace{1em} Seismological Research Letters \hspace{1em} Volume 00, Number 0 \hspace{1em} November/December 2012}
+\else
+	\usepackage[left,displaymath,pagewise]{lineno}
+	\setlength\linenumbersep{20pt}
+	\doublespacing
+	\captionsetup{font=doublespacing}
+	\cftpagenumbersoff{figure}
+	\usepackage[tablesfirst,notablist]{endfloat}
+	\AtBeginDelayedFloats{\renewcommand\baselinestretch{1.4}}
+	\renewcommand\cftloftitlefont{\large}
+	\renewcommand\listfigurename{
+		\begin{center}
+		Figure Captions
+		\end{center}
+	}
+	\setlength{\cftparskip}{2ex}
+	\renewcommand\cftfigpresnum{\bf Figure~}
+	\renewcommand\cftfigaftersnum{.}
+	\renewcommand\cftfignumwidth{5.5em}	
+\fi
+\makeatother
+
+\input{mycommands}
+
+\input{title-and-authors}
+
+\begin{document}
+
+%\makeatletter
+%\if@isreview
+%    \input{review-control}
+%\fi
+%\makeatother
+
+\makeatletter
+\if@twocolumn
+    \pagestyle{fancy}
+\fi
+\makeatother
+
+\maketitle
+\makeatletter
+\if@twocolumn
+    \thispagestyle{fancy}
+\fi
+\makeatother
+
+% \makeatletter
+% \if@twocolumn
+%     \footnotetext[1]{Department of Civil and Environmental Engineering, Carnegie Mellon University, Pittsburgh, Pennsylvania, U.S.A.}
+%     \footnotetext[2]{Departmento de Ingenier\'{i}a Civil, Universidad EAFIT, Medell\'{i}n, Colombia}
+% \fi
+% \makeatother
+
+\noindent
+\input{abstract}
+
+\input{content}
+
+\makeatletter
+\if@twocolumn
+    \vspace{3ex}
+    \noindent\raggedleft\it\bf
+	Naeem Khoshnevis\\
+	Center for Earthquake Research and Information\\
+	The University of Memphis\\
+	Memphis, TN 38152, U.S.A.\\
+	nkhshnvs@memphis.edu\\
+	\vspace{2ex}
+	Shima Azizzadeh-Roodpish\\
+	Ricardo Taborda\\
+	Department of Civil Engineering, and\\
+	Center for Earthquake Research and Information\\
+	The University of Memphis\\
+	Memphis, TN 38152, U.S.A.\\
+	\vspace{2ex}
+	Luciano Telesca\\
+	Institute of Methodologies for Environmental Analysis\\
+	National Research Council, Tito, Italy\\
+	\vspace{2ex}
+\fi
+\makeatother
+
+\end{document}
