@@ -195,7 +195,7 @@ FUNCTION {urllink}
 { pop$ "" }
 { url empty$
     { skip$ }
-    { "available at \url{" url * "} (last accessed September 2012)" * }
+    { "available at \url{" url * "} (last accessed September 2016)" * }
     if$ 
 }
 if$
@@ -1140,6 +1140,7 @@ FUNCTION {book}
       format.book.crossref output.nonnull
     }
   if$
+  doilink
   new.block
   note output
   fin.entry
