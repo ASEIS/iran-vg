@@ -39,7 +39,14 @@ Figure \ref{fig:completeness} shows the goodness-of-fit values for the three sei
 % 
 where $e$ is the mathematical constant or Euler's number, $\overline{M}$ is the average magnitude, and $M_{\min}$ is the minimum magnitude in the sample. Here, the value of $M_{\min}$ is the taken as the minimum completeness magnitude $M_c$ obtained or selected for each region's sub-catalog. Table \ref{tab:seismicity} shows the number of declustered events for each region, and the corresponding values of $M_c$ and $b$.
 
-\begin{table}[h]
+\begin{figure}%[t]
+	\centering
+	\includegraphics[width=0.45\textwidth]{figures/pdf/figure-04} 
+	\caption{Completeness magnitude goodness-of-fit test (GFT) results and selected $M_c$ values for the three tectonic seismic regions in northern Iran as evaluated from the time-magnitude sequence of earthquakes during the 2005--2015 period. The symbols indicate the computed GFT values as function of the earthquake magnitude. The horizontal dashed line indicates the desired threshold for the GFT value at 90 percent. The vertical dashed lines and solid symbols indicate the selected completeness magnitude for each region. The color version of this figure is available only in the electronic edition.}
+	\label{fig:completeness}
+\end{figure} 
+
+\begin{table}
 	\fontfamily{lmss}\selectfont
 	\caption{Declustered number of earthquakes and seismic parameters for the three seismic zones of northern Iran.}
 	\centering\small
@@ -56,19 +63,12 @@ where $e$ is the mathematical constant or Euler's number, $\overline{M}$ is the 
 	\label{tab:seismicity}
 \end{table}
 
-\begin{figure}%[t]
+\begin{figure*}[t]
 	\centering
-	\includegraphics[width=0.45\textwidth]{figures/pdf/Figure05.pdf} 
-	\caption{Selection of completeness magnitude $M_c$ of the three tectonic seismic regions in northern Iran in 2005-15 period. The symbols indicate the computed GFT values as function of the earthquake magnitude. The horizontal dashed line indicates the desired threshold for the goodness of fit value at 90 percent. The vertical dashed lines indicate the completeness magnitude of each tectonic seismic region.}
-	\label{fig:completeness}
-\end{figure} 
+	\includegraphics[width=\textwidth]{figures/pdf/figure-05} 
+	\caption{Time-magnitude sequences for the northern Iran seismic zones of Azerbaijan, Alborz and Kopeh-Dagh, during the period between 1 January 2005 and 31 December 2015. The event occurrences are represented by vertical bars or sticks of length equal to the $M_w$ magnitude of each earthquake. These sequences correspond to the declustered catalog but in each case we consider only events with $M_w \geq M_c$. As shown in Fig.~\ref{fig:vg}, the dots at the top of each stick represent the nodes of the visibility graphs. The edges or links are omitted for visual convenience. Highlighted in the figure are the largest events in each sub-catalog, namely the 2012 $M_w 6.4$ East Azerbaijan, 2010 $M_w 5.8$ Damghan, and 2012 $M_w 5.4$ Neyshabur earthquakes. The color version of this figure is available only in the electronic edition.}
+	\label{fig:mag-time}
+\end{figure*}
 
-% Based on the results represented in Fig.~\ref{fig:completeness}, we select the minimum magnitudes for complete recording,  $M_c$ , is 3.5, 2.6, and 2.6 for Azerbaijan, Alborz, and Kopeh Dagh, respectively. Fig.~\ref{fig:mag-time}  shows the magnitude time series of the declustered data for the three regions. Earthquakes with magnitude greater than the completeness magnitude are represented. 
-
-% \begin{figure*}[t]
-% 	\centering
-% 	\includegraphics[scale=0.8]{figures/pdf/Figure06.pdf} 
-% 	\caption{Variation of moment magnitude ($M_w$) of 2005-2015 earthquake for north Iran as a function of time. The figure only represents the declustered events greater than minimum magnitude. The 2012 $M_w 6.4$ East Azerbaijan, 2010 $M_w 5.8$ Damghan, and 2012 $M_w 5.4$ Neyshabur earthquakes are clearly visible as maximum values in Azerbaijan (Az),  Alborz (Az), and Kopeh Dagh (Ko) magnitude-time series.}
-% 	\label{fig:mag-time}
-% \end{figure*}
+In addition to using $M_c$ to determine the $b$-value for each sub-catalog, we also use $M_c$ as the threshold for limiting the minimum magnitude to be considered in the construction of the visibility graph of each region. Figure \ref{fig:mag-time} shows the final time-magnitude sequences for Azerbaijan, Alborz and Kopeh-Dagh. Note that in the case of Alborz and Kopeh-Dagh, we consider events in the declustered catalog down to $M_w \geq 2.6$, whereas in the case of Azerbaijan all events are $M_w \geq 3.5$. We omit showing the graph links as it will make the figure difficult to interpret, but rely on the example we presented on Fig.~\ref{fig:vg}.
 
