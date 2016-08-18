@@ -6,7 +6,7 @@ We are interested in applying the visibility graph method to northern Iran. This
 \begin{figure*}[t]
 	\centering
 	\includegraphics[width=\textwidth]{figures/pdf/figure-02} 
-	\caption{Region of interest, highlighting the seismic zones that are the focus of this study (Azerbaijan, Alborz, and Kopeh-Dagh) for the application of the visibility graph method. The top-right location map shows Iran and the selected area with respect to neighboring countries. The solid dark lines show the boundaries of the additional Zagros and Central-East seismic zones. This zonation follows the divisinos proposed and madofied by \citet{Mirzaei1998} and \citet{Karimiparidari2013}, respectively.}
+	\caption{Region of interest, highlighting the seismic zones that are the focus of this study: Azerbaijan, Alborz, and Kopeh-Dagh. The top-right location-map shows Iran and the selected area with respect to neighboring countries. The solid dark lines show the boundaries of the additional Zagros and Central-East seismic zones. This zonation follows the division proposed by \citet{Mirzaei1998} and later modified by \citet{Karimiparidari2013}. The background shows fault lines and the shaded relief. The color version of this figure is available only in the electronic edition.}
 	\label{fig:study_region}
 \end{figure*}
 
@@ -19,49 +19,49 @@ Last, there is the Kopeh-Dagh seismic zone to the east and northeast. This regio
 \begin{figure*}[t]
 	\centering
 	\includegraphics[width=\textwidth]{figures/pdf/figure-03} 
-	\caption{Declustered instrumental seismicity of northern Iran for the 2005--2015 period, considering only the events in the seismic zones of interest, namely Azerbaila, Alborz, and Kopeh-Dagh. The size of symbols are proportional to the magnitude of the events, as indicated by the artificial scale shown on the right.}
+	\caption{Declustered instrumental seismicity of northern Iran for the 2005--2015 period, considering only the events in the seismic zones of interest, namely Azerbaila, Alborz, and Kopeh-Dagh. The size of symbols are proportional to the magnitude of the events, as indicated by the artificial scale shown on the right. The background shows fault lines and the shaded relief. The color version of this figure is available only in the electronic edition.}
 	\label{fig:seismicity}
 \end{figure*}
 
-It follows from this that the region of interest is one of significant seismic activity, which goes back centuries. We are, however, interested in the most recent instrumental seismicity. In particular, we focus on events recorded in the last decade, between January 2005 and December 2015. We downloaded a catalog of recorded earthquakes 
+It follows from this description that the region of interest is one of significant seismic activity, which goes back centuries. We are, however, interested in the most recent instrumental seismicity. In particular, we focus on events recorded in the last decade, between January 2005 and December 2015. We focus our analysis on this magnitude-time sequence period because in a previous study we observed that the latest decade of seismic records in northern Iran offered the most complete dataset of recorded events, especially for the case of small $M < 4$ earthquakes \citep[e.g.][]{Khoshnevis2016}.
 
+We compiled a catalog of recorded earthquakes with magnitude $M>3$ using data downloaded from the International Institute of Earthquake Engineering and Seismology, IIEES (see the Data and Resources section). The obtained dataset contained a mixture of earthquake magnitude scales, including: moment, $M_w$; local, $M_L$; body wave, $m_b$; surface wave, $M_s$; and duration $M_D$ magnitudes. We converted all earthquakes to moment magnitude, $M_w$. Magnitudes in the $M_L$, $m_b$, and $M_s$ scales were converted using the relationships defined in \citet{Zare2014}, whereas $M_D$ magnitudes were converted using the empirical relationship proposed by \citet{Deniz2010}.
 
+Foreshocks and aftershocks were removed from the catalog following a Poissonian occurrence model using the declustering method of \citet{Gardner1974}, in a manner consistent with previous catalog compilations for the region \citep[e.g.,][]{Zare2014}. Upon declustering, we divide the catalog into three sub-catalogs, each for one of the seismic zones under consideration. Fig.~\ref{fig:seismicity} shows the epicenter location of declustered instrumental earthquakes for the three seismic zones of interest.
 
+We then proceeded to determine the minimum magnitude of completeness, $M_c$, for each region's sub-catalog. The value of $M_c$ is often determined using simple numerical analyses in combination with data inspection. Two common approaches are the maximum curvature (MAXC) and the goodness-of-fit test (GFT) methods \citep{Wiemer2001}. We use the GFT method as introduced by \citet{Wiemer2000}. In this method, the completeness magnitude is obtained such that the catalog satisfies---at a certain acceptance threshold---the Gutenberg-Richter power low, given an extended dataset of events. This extended dataset is composed of predicted and observed events, where the predicted events are generated based on a trial minimum magnitude. The process is repeated for increasing values of the reference minimum magnitude until finding a desirable fit with the power law. \citet{Wiemer2000} suggests a goodness of fit of 90\% as an acceptable threshold to select $M_c$. However, not all frequency-magnitude distributions reach the 90\% mark, in which case $M_c$ can be selected by inspection. 
 
-% \section{Tectonic seismic regions and seismicity parameters}
+Figure \ref{fig:completeness} shows the goodness-of-fit values for the three seismic zones. We indicate the selected value of $M_c$ for each region in the figure. We also obtained the $b$-value in the Gutenberg-Richter law for each region following the maximum likelihood estimation \citep{Aki1965}:
+% 
+\begin{equation}
+	b = \frac{log_{10}(e)}{\overline{M} - M_{min}} \, ,
+\end{equation}
+% 
+where $e$ is the mathematical constant or Euler's number, $\overline{M}$ is the average magnitude, and $M_{\min}$ is the minimum magnitude in the sample. Here, the value of $M_{\min}$ is the taken as the minimum completeness magnitude $M_c$ obtained or selected for each region's sub-catalog. Table \ref{tab:seismicity} shows the number of declustered events for each region, and the corresponding values of $M_c$ and $b$.
 
-% \begin{figure*}[t]
-% \centering
-% \includegraphics[scale=1]{figures/pdf/Figure03.pdf} 
-% \caption{Main fault line and fault system in the region of interest. The borderlines of the seismic zones shown in Fig.~\ref{fig:study_region} are shown in background in gray.}
-% \label{fig:faults}
-% \end{figure*}
+\begin{table}[h]
+	\fontfamily{lmss}\selectfont
+	\caption{Declustered number of earthquakes and seismic parameters for the three seismic zones of northern Iran.}
+	\centering\small
+	\begin{tabular}{|cccc|}
+		\hline
+		Region      & Num.      & \textit{M}c & \textit{b}-value \\ 
+		            & of Events &             &                  \\
+		\hline
+		Azerbaijan  &        93 &         3.5 &             1.02 \\
+		Alborz      &       794 &         2.6 &             0.77 \\
+		Kopeh Dagh  &       282 &         2.6 &             0.58 \\
+		\hline
+	\end{tabular}
+	\label{tab:seismicity}
+\end{table}
 
-% \subsection{Magnitude Conversion}
-
-% The catalog of recorded earthquakes from 2005-15, downloaded from IIEES, reported earthquakes based on different magnitude scales \citep{IIEES}. The  $M_L$,  $M_S$, and  $mb$  magnitudes were converted through conversion relationships, as defined in  \citet{Zare2014}. Some data were also recorded in  $M_D$  (duration magnitude). These data are reported by the International Seismological Centre (ISC).   \citet{Deniz2010}  developed a set of empirical equations to convert earthquake magnitudes from  $mb$,  $M_D$,  $M_L$, and  $M_S$  scales to  $M_W$  scale using the orthogonal regression procedure. They used data from different data centers, including the ISC, of earthquakes that occurred in Turkey. In this study, we use the conversion equation of  \citet{Deniz2010}  to convert  $M_D$  to  $M_W$. 
-
-% \subsection{Declustering} 
-
-% It is generally assumed that the seismicity of each tectonic seismic source follows a Poissonian occurrence process. Therefore, in order to accomplish this, we decluster the earthquake catalog. In compiling the catalog of events, foreshocks and aftershocks are removed using a declustering methodology  presented by \citet{Gardner1974}. Fig.~\ref{fig:seismicity}  shows the epicenter of declustered instrumental  earthquakes.
-
-% \begin{figure*}[t]
-% \centering
-% \includegraphics[scale=1]{figures/pdf/Figure04.pdf} 
-% \caption{Declustered instrumental seismicity map (2005 - 2015) of northern Iran. Different colors indicate the seismicity of different regions. Size of symbols are proportional to the magnitude of the events.}
-% \label{fig:seismicity}
-% \end{figure*}
- 
-% \subsection{Catalog Completeness}
-
-% Catalog completeness is an important factor in studying an earthquake sequence. This characteristic measured as the minimum magnitude of complete recording for earthquake catalog. The completeness magnitude $(M_c)$ is often determined using simple numerical analysis. Two common approaches are maximum curvature method (MAXC) and goodness-of-fit test (GFT)(see \citet{Wiemer2000}). We use the Goodness-of-fit test and compute $M_c$ for each region's catalog. According to the GFT method, a complete catalog should follow the Gutenberg-Richter power law distribution of magnitude. The steps for selecting the completeness magnitude for each catalog include: 1) calculating the a-  and  b-  value based on minimum magnitude; 2) generating  synthetic events based on the achieved value when the cumulative number of events obey the power law distribution; and 3) calculating goodness of fit for predicted and observed cumulative numbers for each magnitude bin  \citep{Wiemer2000}. We increase the minimum magnitude and repeat the process in order to calculate the goodness of fit for each magnitude.  \citet{Wiemer2000} assumed a goodness of fit of 90\% as a threshold to select the completeness of the catalog. However,  not all frequency-magnitude distributions reach the 90\% mark. Fig.~\ref{fig:completeness} shows the goodness-of-fit values for three tectonic seismic regions. For each tectonic seismic region, we select the magnitude corresponding to the highest goodness of fit or the first magnitude with the goodness of fit greater than 90\%.
-
-% \begin{figure}[t]
-% \centering
-% \includegraphics[width=0.45\textwidth]{figures/pdf/Figure05.pdf} 
-% \caption{ Selection of completeness magnitude $M_c$ of the three tectonic seismic regions in northern Iran in 2005-15 period. The symbols indicate the computed GFT values as function of the earthquake magnitude. The horizontal dashed line indicates the desired threshold for the goodness of fit value at 90 percent. The vertical dashed lines indicate the completeness magnitude of each tectonic seismic region.}
-% \label{fig:completeness}
-% \end{figure} 
+\begin{figure}%[t]
+	\centering
+	\includegraphics[width=0.45\textwidth]{figures/pdf/Figure05.pdf} 
+	\caption{Selection of completeness magnitude $M_c$ of the three tectonic seismic regions in northern Iran in 2005-15 period. The symbols indicate the computed GFT values as function of the earthquake magnitude. The horizontal dashed line indicates the desired threshold for the goodness of fit value at 90 percent. The vertical dashed lines indicate the completeness magnitude of each tectonic seismic region.}
+	\label{fig:completeness}
+\end{figure} 
 
 % Based on the results represented in Fig.~\ref{fig:completeness}, we select the minimum magnitudes for complete recording,  $M_c$ , is 3.5, 2.6, and 2.6 for Azerbaijan, Alborz, and Kopeh Dagh, respectively. Fig.~\ref{fig:mag-time}  shows the magnitude time series of the declustered data for the three regions. Earthquakes with magnitude greater than the completeness magnitude are represented. 
 
