@@ -10,14 +10,14 @@ We generate the visibility graph for each sub-region of interest using the time-
 	\label{fig:km}
 \end{figure*}
 
-Next, we examine the relationship between the $b$-values from Table \ref{tab:seismicity} and the $k$-$M$ slope values shown in Fig.~\ref{fig:km}. Figure \ref{fig:regression} shows the scattered results for $k-M$ slope versus $b$-value for the three tectonic seismic regions in northern Iran along with the data-points obtained for analysis of the magnitude-time sequences of the Mexican subduction zone \citep{Telesca2013} and the Pannoninan seismic zone \citep{Telesca2014}, as well as other experimental results \citep{Telesca2014-pone}. Figure \ref{fig:regression} also include the results of different linear regressions between the $b$-value and the $k$-$M$ slope. Each regression shows the addition of new data-points from different studies over time, with the present study adding the latest set of data. Note that the regression improves as new data-points are added, which is indicated by the correlation coefficient $R$. This was previously pointed out by \citet{Telesca2014}. The values of the correlation coefficients are also shown in the figure. According to these results, the universal relationship between the $b$-value and the $k$-$M$ slope is given by:
+Next, we examine the relationship between the $b$-values from Table \ref{tab:seismicity} and the $k$-$M$ slope values shown in Fig.~\ref{fig:km}. Figure \ref{fig:regression} shows the scattered results for $k-M$ slope versus $b$-value for the three tectonic seismic regions in northern Iran along with the data-points obtained for analysis of the magnitude-time sequences of the Mexican subduction zone \citep{Telesca2013} and the Pannoninan seismic zone \citep{Telesca2014}, as well as other experimental results \citep{Telesca2014-pone}. Figure \ref{fig:regression} also include the results of different linear regressions between the $b$-value and the $k$-$M$ slope. Each regression shows the addition of new data-points from different studies over time, with the present study adding the latest set of data. Note that the regression improves as new data-points are added, which is indicated by the correlation coefficient $R$, also shown in the figure. The correlation fitting various regional seismic data was previously pointed out by \citet{Telesca2014}. 
+
+According to these results, a universal relationship between the $b$-value and the $k$-$M$ slope ($m$) can be expressed as:
 % 
 \begin{equation}
-	b = 000 + 000 m \, 
+	b = 000 + 000 m \, .
 	\label{eq:universal.bm}
 \end{equation}
-% 
-where $m$ is the value of the $k$-$M$ slope.
 
 \begin{figure}[h]%[t]
 	\centering
@@ -26,17 +26,41 @@ where $m$ is the value of the $k$-$M$ slope.
 	\label{fig:regression}
 \end{figure}
 
-The level of correlation indicated by the values of $R$ in Fig.~\ref{fig:regression} being close to 1 is indicative of the stability of the relationship, which could be considered universal provided that future tests continue to reinforce these results. Another aspect of interest is the stability of the data points themselves. Note that as presented in Fig.~\ref{fig:regression}, the analysis of the sequences shown in Fig.~\ref{fig:mag-time} only contribute one data point per sub-region of interest. Furthermore, each data-point comes from sequences that vary significantly in terms of the number of events and seismic parameters. 
+Another aspect of interest is the stability of the data points themselves. Note that as presented in Fig.~\ref{fig:regression}, the analysis of the sequences shown in Fig.~\ref{fig:mag-time} only contribute one data point per region of interest. Furthermore, each data-point comes from sequences that vary significantly in terms of the number of events and seismic parameters (see Table \ref{tab:seismicity}). 
 
-\citet{Telesca2013} observed that the value of the $k$-$M$ slope is not particularly sensitive to the sample size in the sequence---at least not when considering sufficiently large sequences. On the other hand, as we will see below, if the sequence window is sufficiently short, then the $k$-$M$ slope value shows a relative dependence on time and thus provides insight about the variation of the seismicity as the sequence progresses. Note also that the threshold value of $M_c$ is significantly smaller for Azerbaijan than for Alborz or Kopeh-Dagh. This is due in part to the fact that the latter two zones were more seismically active in the time period under consideration. However, according to \citet{Telesca2012}, the threshold magnitude has a minor effect in the graph parameters.
+\citet{Telesca2013} observed that the value of the $k$-$M$ slope is not particularly sensitive to the sample size in the sequence---at least not when considering sufficiently large sequences. On the other hand, as we will see below, if the sequence window is sufficiently small, then the $k$-$M$ slope value shows a relative dependence on time and thus provides insight about the variation of the seismicity as the sequence progresses. Note also that the threshold value of $M_c$ is significantly smaller for Azerbaijan than for Alborz or Kopeh-Dagh. This is due in part to the fact that the latter two zones were more seismically active in the time period under consideration. However, according to \citet{Telesca2012}, the threshold magnitude has a minor effect in the graph parameters.
 
-To further explore the sensitivity of the graph properties to the number of events in each catalog and the value of the minimum magnitude to be considered, we randomly picked a significant number of sub-sequences from within the initial catalog compiled for each region, and repeated the analysis for each sub-sequence. In total, for each region, we extracted 200 new sub-sequences from the initial (pre-declustering) catalog. The number of events in each sub-sequence was varied randomly but chosen to be large enough to represent the seismic characteristics of each region. In particular, the minimum size of each sub-sequence was set to be $n \geq 150$, whereas the maximum size in the sequence was set to be as large as the original (pre-declustering) catalog. We forced the random sub-sequences to progress positively in time without altering the natural occurrence of events. In other words, we randomly determined the initial event and the sub-sequence size (number of events to be considered), then picked that number of events following the initial earthquake in the sub-sequence. Next, we determined the value of $M_c$ and $b$, created the graph for all events with $M \geq M_c$, and extracted the connectivity degree of the events in each sub-sequence. 
+To further explore the sensitivity of the graph properties to the number of events in each catalog and the value of the minimum magnitude to be considered, we randomly picked a significant number of sub-sequences from within the initial catalog compiled for each region, and repeated the analysis for each sub-sequence. In total, for each region, we extracted 200 new sub-sequences from the initial (pre-declustering) catalog. The number of events in each sub-sequence was varied randomly but chosen to be large enough to represent the seismic characteristics of each region. In particular, the minimum size of each sub-sequence was set to be $n \geq 150$, whereas the maximum size in the sequence was set to be as large as the original (pre-declustering) catalog (see Table \ref{tab:seismicity}). We forced the random sub-sequences to progress positively in time without altering the natural occurrence of events. In other words, we randomly determined the initial event and the sub-sequence size (number of events to be considered), and then picked that number of events following the initial earthquake in the sub-sequence. Next, we determined the value of $M_c$ and $b$ as previously done for the complete catalogs, created the graph for all events with $M \geq M_c$, and extracted the connectivity degree of the events in each sub-sequence. 
 
-Figure \ref{fig:random}a shows scattered points for all the individual $k$-$M$ slope and $b$-value pairs for all the sub-sequences that were randomly generated for each region in northern Iran. Next to it, Figs.~\ref{fig:random}b and \ref{fig:random}c show the 
+\begin{figure*}%[t]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figures/pdf/figure-08} 
+	\caption{Relationship between $k-M$ and $b-value$ of three Iranian tectonic seismic regions for 200 random sequence. The numbers on the mean and standard deviation plots are coefficient of variations in percent $(standard \ deviation / mean)$.}
+	\label{fig:random}
+\end{figure*}
 
-The figure also shows the linear correlation for the 
+Figure \ref{fig:random}a shows scattered points for all the individual $k$-$M$ slope and $b$-value pairs for all the sub-sequences that were randomly picked from the initial catalogs of each region in northern Iran. Figures \ref{fig:random}b and \ref{fig:random}c show the variability of the $k$-$M$ slope and $b$-value, respectively. These latter figures show the mean values of each parameter for all the random sub-sequences and the amplitudes of $\pm 1$ standard deviation, as well as the coefficients of variation (in percentage). Figure \ref{fig:random}a also includes the data points corresponding to the complete catalogs (solid symbols); the points corresponding to the mean values of the $k$-$M$ slope and $b$, from Figs.~\ref{fig:random}b and \ref{fig:random}c; and the linear regression from equation \ref{eq:universal.bm} as well as the linear regression obtained using the random sub-catalog visual graph analysis for northern Iran, which corresponds to:
+% 
+\begin{equation}
+	b = 000 + 000 m \, .
+	\label{eq:iran.bm}
+\end{equation}
 
-the relationship between  $k-M$  slope and  $b-value$  of the randomly selected data and the statistical parameters for variables. Although changing the number of events and the threshold magnitude is slightly changing the results, however,  the results are fairly well clustered for each tectonic seismic region. 
+The results presented in Fig.~\ref{fig:random} indicate there exist only but a small bias (between 5 and 10 percent) depending on the analysis being done with multiple sub-sequences as opposed to the complete catalog sequences. In particular, $k$-$M$ slopes are slightly smaller when done with the random sequence analysis; whereas $b$-values seem more stable. This is also reflected by the differences between the linear regressions for the data of northern Iran exclusively, as opposed to the regression obtained using the data points from this and other studies. In this case, we note that the universal regression increases at a smaller rate than the regression obtain only for northern Iran, as can be seen from the difference between the slope coefficients in equations (\ref{eq:universal.bm}) and (\ref{eq:iran.bm}).
+
+\begin{figure*}%[t]
+	\centering
+	\includegraphics[width=\textwidth]{figures/pdf/figure-09} 
+	\caption{ Variation of $k-M$ slope  and $b-value$ (Left), and $ < T_c >$ (Right) as a function of time for three tectonic seismic regions in north Iran. Black arrows show the occurrence of the major earthquakes. Numbers on arrows indicate the moment magnitude of the earthquake (see Fig.~\ref{fig:mag-time} for reference).  The magnitude-time series are presented as a filled plot blew each plot. The variation of the heigh of filled plots are corresponding to the event magnitudes. Decreasing the value of  $<T_c>$  ,  $k-M$ , and  $b-value$  before large earthquakes predominantly happened in all tectonic seismic regions.}
+	\label{fig:tc}
+\end{figure*}
+
+We now investigate the relationship of parameters obtained through the visibility graph analysis and the seismicity of northern Iran with time. Figure \ref{fig:tc} shows...
+
+% =========
+
+
+% the relationship between  $k-M$  slope and  $b-value$  of the randomly selected data and the statistical parameters for variables. Although changing the number of events and the threshold magnitude is slightly changing the results, however,  the results are fairly well clustered for each tectonic seismic region. 
 
 % =========
 
@@ -48,22 +72,8 @@ the relationship between  $k-M$  slope and  $b-value$  of the randomly selected 
    
 % The coefficient of variation of parameters is shown in Fig.~\ref{fig:random}. The  $k-M$  slope shows the higher coefficient of variation which indicates the fact that the  $k-M$  slope is more dependent on the window size and threshold magnitude than on the a-  and  b-values , which suggests that  the $k-M$  slope can better represent the dynamic characteristics of the magnitude-time series. 
 
-\begin{figure*}%[t]
-	\centering
-	\includegraphics[width=0.9\textwidth]{figures/pdf/figure-08} 
-	\caption{Relationship between $k-M$ and $b-value$ of three Iranian tectonic seismic regions for 200 random sequence. The numbers on the mean and standard deviation plots are coefficient of variations in percent $(standard \ deviation / mean)$.}
-	\label{fig:random}
-\end{figure*}
-
 % *******
 
 % Fig.\ref{fig:tc} shows the variation of the  $k-M$  slope and  $b-value$  with time. Due to lower number of events in Azerbaijan's catalog, we choose 20 events as the window length with a shift of one event between two successive windows. With higher window length we loose the variation of considerable amount of information in time (e.g. with n=40 we loose almost half of the Azerbaijan catalog). Due to taking average values of successive windows, very small window length can not display the seismicity behavior especially before big earthquake. Maintaining consistency, we use the window length equal to 20 events for all three regions. The calculated parameters of each window are associated with the time of occurrence of the last event in the sliding window. The  $k-M$  slope and  $b-value$  in all tectonic seismic regions are very similar. In general, in all regions the $b-value$  and  $k-M$  slope drop considerably before large earthquakes. The decline in the  $b-value$  before large earthquakes has been studied in many regions \citep{Wyss2000, Wyss2006, Schorlemmer2005, Chan2012}.
 
 % \citet{Telesca2016}  observed the decrease in  $<T_c>$  before the large earthquake of the western India earthquake sequence. Fig.\ref{fig:tc}  shows the time variation of  $<T_c>$   in the study area. The reduction of  $<T_c>$   before large earthquakes is clearly visible.  \citet{Telesca2016}  demonstrated that the decrement of  $<T_c>$   before a large earthquake is independent of window size and threshold magnitude. Decreasing the value of  $<T_c>$  ,  $k-M$ , and  $b-value$  before large earthquakes predominantly happened in all tectonic seismic regions (see Fig.\ref{fig:tc} for reference.)
- 
-\begin{figure*}[t]
-	\centering
-	\includegraphics[width=\textwidth]{figures/pdf/figure-09} 
-	\caption{ Variation of $k-M$ slope  and $b-value$ (Left), and $ < T_c >$ (Right) as a function of time for three tectonic seismic regions in north Iran. Black arrows show the occurrence of the major earthquakes. Numbers on arrows indicate the moment magnitude of the earthquake (see Fig.~\ref{fig:mag-time} for reference).  The magnitude-time series are presented as a filled plot blew each plot. The variation of the heigh of filled plots are corresponding to the event magnitudes. Decreasing the value of  $<T_c>$  ,  $k-M$ , and  $b-value$  before large earthquakes predominantly happened in all tectonic seismic regions.}
-	\label{fig:tc}
-\end{figure*}
