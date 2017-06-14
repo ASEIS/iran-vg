@@ -42,9 +42,9 @@ gmt pscoast -R -J -B -Dh -W0.25p -N1/0.25p -A500 -V -P -O -K -Lf73/23/23/1000 >>
 gmt pscoast -R -J -B -Slightblue -A500 -Dh -W0.25p -V -P -O -K >> ${PSNAME}
 
 
-awk '($7>2.8){print $9,$10,($7^2.5)/140}' Alborz_2005_all_mag.txt|gmt psxy -Sc -G196/19/19 -W0.5  -R$REGION $PROJ -K -O >> ${PSNAME}
-awk '($7>3.4){print $9,$10,($7^2.5)/140}' Azerbaijan_2005_all_mag.txt|gmt psxy -Sc -G102/178/255 -W0.5  -R $PROJ -K -O >> ${PSNAME}
-awk '($7>2.5){print $9,$10,($7^2.5)/140}' KopehDagh_2005_all_mag.txt|gmt psxy -Sc -G153/153/153 -W0.5  -R $PROJ -K -O >> ${PSNAME}
+awk '($7>3.0){print $9,$10,($7^2.5)/140}' Alborz_2005_2016.txt|gmt psxy -Sc -G196/19/19 -W0.5  -R$REGION $PROJ -K -O >> ${PSNAME}
+awk '($7>3.5){print $9,$10,($7^2.5)/140}' Azerbaijan_2005_2016.txt|gmt psxy -Sc -G102/178/255 -W0.5  -R $PROJ -K -O >> ${PSNAME}
+awk '($7>3.5){print $9,$10,($7^2.5)/140}' KopehDagh_2005_2016.txt|gmt psxy -Sc -G153/153/153 -W0.5  -R $PROJ -K -O >> ${PSNAME}
 
 cat << EOF |awk '{print $1,$2,($3^2.5)/140}' |gmt psxy -Sc -G196/19/19 -W0.5  -R $PROJ -O >> ${PSNAME}
 61 37.7   3
