@@ -1,0 +1,38 @@
+
+=================================================================
+PAAG comments:
+=================================================================
+
+I have received the reviewer report(s) on your manuscript, "Analysis of the 2005-2015 Earthquake Sequence in Northern Iran Using the Visibility Graph Method", which you submitted to Pure and Applied Geophysics.
+
+Based on the advice received, I will consider your paper for publication after moderate to major revision.  When preparing your revised manuscript I ask you to carefully consider the reviewer comments, which are attached, and submit a list of responses to them. 
+
+=================================================================
+Reviewer #1:
+=================================================================
+
+Dear Editor,
+
+This is an interesting paper that applies a relatively new technique to the seismicity data in Northern Iran. The manuscript is well-written and would be a worthy contribution to the Pageoph journal. I have a few moderate-to-major concerns that I recommend to be addressed by the authors in a revised manuscript.
+ 
+1. Please explain why you decluster the catalog and be more specific on the declustering method/declustering-parameters and the results of the declustering procedure. How many events are in the catalog before/after declustering?
+2. In order to check how well the declustering method worked for the analyzed datasets, would be useful to show the earthquakes in a plot of longitude versus time.
+3. I think would be interesting to check/discuss/compare the k-M slope and b-value relation for both the original and the declustered catalogs.
+4. I would suggest to check the results for several magnitude thresholds above the completeness magnitude. Are the conclusions robust or do they depend on the chosen magnitude thresholds?
+5. Would it be possible to calculate a correlation coefficient for the k-M slopes and the b-values in Figure 9 (middle plot)?
+6. The authors use 20 events (in a moving window) for estimating the b-values and k-M slopes in Figure 9. I think this is an extremely small number and I am concerned about the reliability of the b-value estimates. At least for the areas of higher seismicity the authors should also present graphs obtained using a larger number of events per moving window.
+7. The discussion of b-values in relation with larger earthquakes (page 10) in Figure 9 is unclear. From a quick visual inspection, I fail to see any distinct anomalies before larger (M > 5.0) events. I think that a lack of correlation should be also discussed in the manuscript, if true.
+
+
+=================================================================
+Reviewer #2: 
+=================================================================
+
+The authors present an analytical method to estimate statistical properties of earthquake catalogs and they apply their method in Iranian catalog. Although I find some promise in the method I suggest that more analysis is required for the study to be comprehensive. 
+
+1) Declustering the earthquake catalog, especially using parameters derived for California seismicity under modest monitoring conditions only brings additional uncertainty in the analysis. I am not sure why the authors believe that they should declutter the catalog. They could report if they find any time variability of b-value before/after aftershock sequences. I would suggest not going ahead with declustering.
+2) Uncertainty analysis for standard b-value estimation for sample population, magnitude correction
+3) I find that Mc (magnitude of completeness) determination, should be done in a time-dependent manner since from the Fig. 5 it is obvious that monitoring conditions change.
+4) How do the Authors account for Bam earthquake in 2003 that has aftershock in the early part of their catalog?
+
+=================================================================

@@ -1,0 +1,46 @@
+
+=================================================================
+SRL comments:
+=================================================================
+
+Reviewers' and Editorial comments:
+
+Editor's comments: This manuscript was reviewed by two external referees. Unfortunately both of them found serious issues in the current version, and recommended for rejection. In addition, based on our initial email conversation, I felt that this manuscript would probably fit better with BSSA or other more research-focus journals. You can find their comments below, in case you would like to modify it and submit to other journals. I am sorry for sending this negative news after the long review process. But thanks again for your interest in SRL.
+
+=================================================================
+Reviewer #1: 
+=================================================================
+
+This paper presents a visibility graph analysis of seismicity within three regions in Iran.  In the visibility graph method, a graph is formed by connecting earthquakes on a magnitude-time "lollipop"-style graph. Two earthquakes (nodes) are connected on the graph if they are not blocked by the "sticks" of the lollipops (see Figure 1).
+
+The paper does not discuss what the connections between nodes are intended to represent, but perhaps the idea is that connected nodes are probable-connected earthquakes (e.g., foreshock-mainshock or mainshock-aftershock pairs).  This analogy doesn't really work, though, for several reasons: the graph is done in magnitude-linear time space, and the "reach" in time for mainshocks is proportional to 10^M, not M.  Also there is a time symmetry to the graph-connection rules that is not present in Omori's Law.
+
+Once the graph is constructed, the paper proceeds with a comparison of graph characteristics, most notably the change in average node connectedness (degree) with earthquake magnitude.  This is found, in agreement with past studies, to correlate with b-value.
+
+I don't understand what doing the analysis teaches us about seismicity.  One can transform a seismic catalog into a visibility graph, and some parameters of the graph will be correlated with b-value (although in this case, not the complete catalog b-value, since a Gardner-Knopoff declustering is performed first).  But if you want to know the b-value, it's a lot simpler to compute the b-value; and it's not clear what value is added from doing the graph analysis.
+
+I don't think this work is suitable for SRL.  I don't see how this analysis is useful or informative.  That aspects of a visibility graph correlate with well-studied seismological parameters (b-value) is a mathematical curiosity, and not a particularly surprising one at that.
+
+=================================================================
+Reviewer #2: 
+=================================================================
+
+The manuscript of Khoshnevis et al. deals with the application of methods from graph theory to an earthquake sequence of Iran. Although the paper is well written and organized, I cannot recommend publication. In particular, I do not find any result, which could be useful or interesting for the seismological community.
+
+The authors consider a time series (magnitude vs. time) and define a visibility graph. Two events are "visible" for each other, if no other event interrupts their linear connection. This is a mathematical definition from graph theory. 
+
+* The physical/seismological meaning is, however, unclear. Why should this property be interesting for seismologists? Why is space not taken into account? In more general terms, I would like to know, what is the underlying research question that motivates the authors to apply this method.
+
+In the remainder of the manuscript, common measures from graph theory like the connectivity are calculated. The finding that the connectivity k increases with magnitude m, is rather trivial: For example, for a large earthquake it is very likely that it "sees" many other earthquakes without being interrupted by events in between (see Fig. 1). 
+
+* The authors' conclusion that the relationship is linear, is speculative in the light of Fig. 6.  
+
+Next, it is suggested that the slope of the k-m plot is proportional to the Richter b-value. This is shown in Fig. 7 for the present study (3 data points), for two previous studies of Telesca et al. (5 and 2 data points), and for some synthetic data with unrealistically low b-values between 0.1 and 0.5. When I focus on the range of b-values which are common for real earthquake data (b = 0.8,..., 1.2), I see five data points with nearly constant k-m slope ~9. Regardless whether the slope is independent of b or linearly increasing with b: 
+
+* What can be learned from such a relation?
+
+In Fig. 9 (top panels), the mean time between an earthquake and the previous visible events is shown as a function of time. As the authors admit in the last sentence of the Results section, there is no correlation with large events nor any other useful feature in the plots. The middle panel shows the k-m slope as a function of time. If I understand correctly, for each time only earthquakes from the past are used. In Azerbaijan, there is a vague correlation of the slope with the b-value, but no precursory signal in the slope. In Alborz, the slope reflects essentially the same information as the b-value. A statistical significant correlation with large earthquakes is, however, not visible. In the case of Kopeh Dagh, there is no correlation with the b-value nor a correlation with large earthquakes.
+
+In sum, the present work presents an arbitrary application of a mathematical method to an earthquake time series without specific research question. In a lucky situation, such a study might accidentally produce interesting results. Here the results are essentially noise.
+
+=======================================================================
