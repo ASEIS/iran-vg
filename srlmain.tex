@@ -45,6 +45,7 @@
 \usepackage{balance}
 \usepackage{times}
 \usepackage[hang]{footmisc}
+\usepackage[dvipsnames]{xcolor}
 
 
 % MARGINS AND DIMENSIONS
@@ -95,7 +96,7 @@
 \urlstyle{same}
 
 
-%  CAPTIONS
+% CAPTIONS
 % ------------------------------------------------------------------------------
 
 \captionsetup{font={footnotesize,sf},labelfont=bf}
@@ -173,6 +174,8 @@
 \newcommand{\myaffil}[1]{$^{\mbox{\small #1}}$}
 \newcommand{\cmmnt}[1]{}
 
+\newcommand{\myrevision}[1]{\textcolor{Green}{#1}}
+
 % TITLE AND AUTHORS PREPARATION
 % ------------------------------------------------------------------------------
 
@@ -215,9 +218,6 @@
     \end{flushleft}
 }
 
-% Revision format added 
-\usepackage[dvipsnames]{xcolor}
-\newcommand{\myrevision}[1]{\textcolor{Green}{#1}}
 
 % ==============================================================================
 % THE DOCUMENT
@@ -253,14 +253,14 @@
 \makeatother
 
 
-
-
-
 % ABSTRACT
 % ------------------------------------------------------------------------------
 
 \noindent
 \input{abstract}
+
+\subsubsubsection*{Keywords:}%
+\input{keywords}
 
 % ------------------------------------------------------------------------------
 

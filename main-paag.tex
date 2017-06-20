@@ -1,0 +1,184 @@
+
+\documentclass[natbib,referee]{svjour3}
+
+\smartqed  % flush right qed marks, e.g. at end of proof
+
+
+% PACKAGES
+% ------------------------------------------------------------------------------
+
+\usepackage{simplemargins}
+\usepackage{textcomp}
+\usepackage{amsbsy}
+\usepackage[dvipsnames]{xcolor}
+
+\usepackage{graphicx}
+\usepackage[pdftex,bookmarks=false]{hyperref}
+
+
+% LINKS
+% ------------------------------------------------------------------------------
+
+\hypersetup{
+    pdfpagelayout=OneColumn,
+    colorlinks = true,
+    urlcolor   = blue,
+    citecolor  = blue,
+    linkcolor  = blue
+}
+\urlstyle{same}
+
+
+% ADDITIONAL COMMANDS
+% ------------------------------------------------------------------------------
+
+\newcommand{\myrevision}[1]{\textcolor{Green}{#1}}
+\settopmargin{1.2in}
+\setleftmargin{1in}
+\setrightmargin{1in}
+\setbottommargin{.2in}
+
+
+% JOURNAL NAME
+% ------------------------------------------------------------------------------
+
+\journalname{Pure and Applied Geophysics}
+
+
+% MAIN DOCUMENT STARTS
+% ==============================================================================
+
+\begin{document}
+
+
+% TITLE
+% ------------------------------------------------------------------------------
+
+\title{Analysis of the 2005--\myrevision{2016} earthquake sequence in northern Iran using the visibility graph method}
+\titlerunning{Analysis of northern Iran seismicity using the visibility graph method}
+
+
+% AUTHORS
+% ------------------------------------------------------------------------------
+
+\author{%
+    Naeem Khoshnevis \and 
+    Ricardo Taborda \newline
+    Shima Azizzadeh-Roodpish \and 
+    Luciano Telesca
+}
+
+% \authorrunning{N.~Khosh} % if too long for running head
+
+\institute{
+    N. Khoshnevis \and
+    R. Taborda \and
+    S. Azizzadeh-Roodpish 
+    \at
+        Center for Earthquake Research and Information\\
+        The University of Memphis, Memphis, TN 38152, U.S.A.\\
+        \email{nkhshnvs@memphis.edu}
+    \and
+    R. Taborda \and
+    S. Azizzadeh-Roodpish 
+        \at
+        Department of Civil Engineering\\
+        The University of Memphis, Memphis, TN 38152, U.S.A.
+    \and
+    L. Telesca
+        \at
+        Institute of Methodologies for Environmental Analysis\\
+        National Research Council, Tito, Italy.
+}
+
+\date{Received: date / Accepted: date}
+
+\maketitle
+
+\begin{abstract}
+    \input{abstract}
+    \keywords{\input{keywords}}
+\end{abstract}
+
+\input{content}
+
+% \section{Introduction}
+% \label{sec:introduction}
+% Your text comes here. Separate text sections with
+% \section{Section title}
+% \label{sec:1}
+% Text with citations \cite{RefB} and \cite{RefJ}.
+% \subsection{Subsection title}
+% \label{sec:2}
+% as required. Don't forget to give each section
+% and subsection a unique label (see Sect.~\ref{sec:1}).
+% \paragraph{Paragraph headings} Use paragraph headings as needed.
+% \begin{equation}
+% a^2+b^2=c^2
+% \end{equation}
+
+% % For one-column wide figures use
+% \begin{figure}
+% % Use the relevant command to insert your figure file.
+% % For example, with the graphicx package use
+%   \includegraphics{example.eps}
+% % figure caption is below the figure
+% \caption{Please write your figure caption here}
+% \label{fig:1}       % Give a unique label
+% \end{figure}
+% %
+% % For two-column wide figures use
+% \begin{figure*}
+% % Use the relevant command to insert your figure file.
+% % For example, with the graphicx package use
+%   \includegraphics[width=0.75\textwidth]{example.eps}
+% % figure caption is below the figure
+% \caption{Please write your figure caption here}
+% \label{fig:2}       % Give a unique label
+% \end{figure*}
+% %
+% % For tables use
+% \begin{table}
+% % table caption is above the table
+% \caption{Please write your table caption here}
+% \label{tab:1}       % Give a unique label
+% % For LaTeX tables use
+% \begin{tabular}{lll}
+% \hline\noalign{\smallskip}
+% first & second & third  \\
+% \noalign{\smallskip}\hline\noalign{\smallskip}
+% number & number & number \\
+% number & number & number \\
+% \noalign{\smallskip}\hline
+% \end{tabular}
+% \end{table}
+
+
+%\begin{acknowledgements}
+%If you'd like to thank anyone, place your comments here
+%and remove the percent signs.
+%\end{acknowledgements}
+
+% BibTeX users please use one of
+%\bibliographystyle{spbasic}      % basic style, author-year citations
+%\bibliographystyle{spmpsci}      % mathematics and physical sciences
+%\bibliographystyle{spphys}       % APS-like style for physics
+%\bibliography{}   % name your BibTeX data base
+
+% Non-BibTeX users please use
+% \begin{thebibliography}{}
+% %
+% % and use \bibitem to create references. Consult the Instructions
+% % for authors for reference list style.
+% %
+% \bibitem{RefJ}
+% % Format for Journal Reference
+% Author, Article title, Journal, Volume, page numbers (year)
+% % Format for books
+% \bibitem{RefB}
+% Author, Book title, page numbers. Publisher, place (year)
+% % etc
+% \end{thebibliography}
+
+\end{document}
+
