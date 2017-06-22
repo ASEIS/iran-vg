@@ -32,7 +32,7 @@ We thank the reviewer for his/her comments and suggestions, which helped us impr
 \newline
 
 \introcomment{~}{%
-This is an interesting paper that applies a relatively new technique to the seismicity data in Northern Iran. The manuscript is well-written and would be a worthy contribution to the Pageoph journal. I have a few moderate-to-major concerns that I recommend to be addressed by the authors in a revised manuscript.
+This is an interesting paper that applies a relatively new technique to the seismicity data in northern Iran. The manuscript is well-written and would be a worthy contribution to the Pageoph journal. I have a few moderate-to-major concerns that I recommend to be addressed by the authors in a revised manuscript.
 }
 
 \comment{1}{%
@@ -40,7 +40,7 @@ Please explain why you decluster the catalog and be more specific on the declust
 }
 
 \response{%
-Application of VG approach in the seismic catalog is a novel approach. Recent studies have used both declustered (e.g., Telesca et al (2014b) and Telesca et al (2016)) and the whole catalog (Telesca and Lovallo (2012) and Telesca et al (2013)). Based on this comment and subsequent comment of the reviewer (and also the comments of second reviewers), we consider both whole and declustered catalog. We used Gardner and Knopoff (1974) method for declustering the catalog and reported the catalog size for original data (whole catalog), whole catalog after considering completeness magnitude and also declustered catalog in Table 1.  
+We initially declustered the catalog out of personal choice. Other recent studies using the visibility graph method have used complete and declustered catalogs indistinctively, and with the method being only recently applied in seismology, there is still no clear consensus on what is the appropriate approach when it comes to the treatment of the catalog to be used. Telesca et al.~(2014b) and Telesca et al.~(2016), for instance, used declustered catalogs, whereas Telesca and Lovallo (2012) and Telesca et al.~(2013) used complete catalogs. In the revised version include results for both cases, although we tend to focus on the complete catalog. It seems the rsults are not particularly sensitive to the presence or basence of foreshocks and aftershocks. Instead, as we discuss now in the revised version and in response to other questions by the reviewers, it seems the visibility graph results are more sensitive to the completeness itself (i.e., to $M_c$) and the number of events. In the revised version of Table 1 we now include the number of events in each type of catalog. We also improved the language in the text to make it very clear when we refer to either the whole, complete, or declustered catalogs. The methodology used for declustering is that of Gardner and Knopoff (1974). In the revised version we make a note to make it clear that we recognize that this method was calibrated for a different region (California), but we believe the results are still acceptable.
 }
 
 \comment{2}{%
@@ -48,7 +48,7 @@ In order to check how well the declustering method worked for the analyzed datas
 }
 
 \response{%
-That is a good point. However, we think it gives an idea of distance based analysis of VG which is far from the scope of this article. We add the figure of original catalog before and after considering the completeness magnitude (whole and complete catalogs.)
+Given the changes made to the paper, and most of the figures now focusing on the complete catalog (with only contrasting references with respect to declustered catalog results), we believe this is not entirely necesary. Besides, it is out of the scope of the paper to determine the effectiveness of the declustering method or its appropriateness for northern Iran. We prefer to focus on the sensibility of the results obtained with the visibility graph method to the general uncertainties in data manipulation, and for that objective, the declustering applied serves the purpose sought. Nonetheless, we modified Figure 1 to include both the whole and complete catalogs, to show the contrast after evaluating completeness, and include the number of events for the whole, complete, and declustered catalogs in Table 1. We feel that additional figures with the declustered catalog event locations would not necessarily add value to the discussion about the visibility graph method.
 }
 
 \comment{3}{%
@@ -56,7 +56,7 @@ I think would be interesting to check/discuss/compare the k-M slope and b-value 
 }
 
 \response{%
-Thanks for the comment. We considered both catalogs and presented the results. Please see Fig. 7. 
+Thank you for suggesting this. The new version of the manuscrip now considers comparisons between results obtained for the complete and declustered catalogs. In particular, we show the differences in the results of the analyses of the different catalogs in Figures 7 and 8. In addition, in several places in the manuscript, we now make mention to results obtained for the declustered catalogs in contrast to the complete catalogs. Due to space limitations we do not include all results in all figures, but we did make an effort to coment on this when appropriate. In general, we found that the differences introduced by declustering were more due to the reduced number of events than to anything else. Same happens with changes in the value of $M_c$.
 }
 
 \comment{4}{%
@@ -64,33 +64,34 @@ I would suggest to check the results for several magnitude thresholds above the 
 }
 
 \response{%
-The seismicity parameters change based on completeness magnitude. The parameters which come from the VG analysis also follow this pattern. According to this comment and comment \#3 of second reviewer we compute time dependent completeness test and choose a conservative completeness magnitude.  
+We did some of these tests off-line and included comments about it in the manuscript. In general, we observed that the parameters extracted from the graph and its relationship with $b$ can be affected by changes in the completeness magnitude threshold, but because the seismicity parameters also change based on completeness magnitude, the net effect on the universal relationship between $m$ and $b$ do not seem to be significant. In general, upon reviewing the manner in which we compute $M_c$ as suggested by Reviewer \#2, we found the more relevant effect to be in the number of events, which seem to influence the quality of the relationship between $m$ and $b$. We now make comments about these changes and their effect in the revised manuscript in the Results and Conclusions sections. The changes to the method used to compute $M_c$ are decribed in the Methodlogy section, and in the answer to Comment \#3 from Reviewer \#2.
 }
- 
+
 \comment{5}{%
 Would it be possible to calculate a correlation coefficient for the $k-M$ slopes and the $b-values$ in Figure 9 (middle plot)?
 }
 
 \response{%
-We can add the numbers into figure 10. \\
- (Dec catalog:\ \ \ \   $ k_m :  Az =  4.4\%  Al =  7.1 \%  Ko =  6.6\% -- b: Az = 6.1\%  Al = 3.3\% Ko=4.8\%$)\\
- (Whole catalog: $ k_m :  Az =  9.4\%  Al =  7.4 \%  Ko =  6.2\% -- b: Az = 5.4\%  Al = 4.8\% Ko=5.5\%$)
+Rather than including these numbers, we include a new figure (Fig.~10) in which we show regresions between $b$ and $m$ for the condensed data-points from Figure 9. We thought this was a better way of showing the correlation between $b$ and $m$. The Results section now includes a paragraph with comments on this new figure.
+% We can add the numbers into figure 10. \\
+%  (Dec catalog:\ \ \ \   $ k_m :  Az =  4.4\%  Al =  7.1 \%  Ko =  6.6\% -- b: Az = 6.1\%  Al = 3.3\% Ko=4.8\%$)\\
+%  (Whole catalog: $ k_m :  Az =  9.4\%  Al =  7.4 \%  Ko =  6.2\% -- b: Az = 5.4\%  Al = 4.8\% Ko=5.5\%$)
 }
 
 \comment{6}{%
-The authors use 20 events (in a moving window) for estimating the b-values and k-M slopes in Figure 9. I think this is an extremely small number and I am concerned about the reliability of the b-value estimates. At least for the areas of higher seismicity the authors should also present graphs obtained using a larger number of events per moving window.
+The authors use 20 events (in a moving window) for estimating the $b$-values and $k$-$M$ slopes in Figure 9. I think this is an extremely small number and I am concerned about the reliability of the $b$-value estimates. At least for the areas of higher seismicity the authors should also present graphs obtained using a larger number of events per moving window.
 }
 
 \response{%
-Thanks for the comment. We tried different window size from 20 to 100. As it is natural to expect, there are trade-offs between different window sizes. Smaller window sizes emphasize the local changes in the time series, but are less reliable when it comes to the seismicity parameters (e.g., b value). Larger window sizes, on the other hand, offer less insight into the time dependence of the window sequence characteristics. We chose a window size $n=50$, which is consistent with the suggested minimum number of events acceptable to estimate b according to  Woessner and Wiemer (2005). We modified the text accordingly. 
+Thanks for the comment. We tried different window sizes from 20 to 100 events. As it is natural to expect, there are trade-offs between different window sizes. Smaller window sizes emphasize the local changes in the time series, but are less reliable when it comes to the seismicity parameters (e.g., $b$ value). Larger window sizes, on the other hand, offer less insight into the time dependence of the window sequence characteristics. In the end, we chose a window size $n=50$, which is consistent with the suggested minimum number of events acceptable to estimate $b$ according to Woessner and Wiemer (2005). We modified the text accordingly.
 }
 
 \comment{7}{%
-The discussion of b-values in relation with larger earthquakes (page 10) in Figure 9 is unclear. From a quick visual inspection, I fail to see any distinct anomalies before larger (M > 5.0) events. I think that a lack of correlation should be also discussed in the manuscript, if true.
+The discussion of $b$-values in relation with larger earthquakes (page 10) in Figure 9 is unclear. From a quick visual inspection, I fail to see any distinct anomalies before larger ($M > 5.0$) events. I think that a lack of correlation should be also discussed in the manuscript, if true.
 }
 
 \response{%
-The correlation for 2012 Mw 6.4 Azerbaijan earthquake is clear to see. However, we agree with the reviewer that the drops of b-value is not consistent. Or we should say in the case of big earthquake there is always a drop in b and k-m value, however, there are some drops in the window analysis which is not aligned with big earthquake. We addressed the lack of correlation for the KopehDagh region. We also discussed that the lack of correlation could be the results of relatively high completeness magnitude. The text is modified accordingly.
+The correlation for 2012 Mw 6.4 Azerbaijan earthquake is clear to see. However, we agree with the reviewer that the drops in $b$ and $m$ are not consistent. We now make a more transparent assessment of the results and comment on this in the revised Results and Conclusions sections. There, we address the lack of correlation for the some of the events in the Alborz and Kopeh Dagh regions. Based on the experience we gaing through working with the method, we suggest that the lack of correlation may be the results of relatively high completeness magnitude values, or lack of distinctive large magnitide ($M>6$) events. The text was modified accordingly.
 }
 
 
@@ -104,7 +105,7 @@ The correlation for 2012 Mw 6.4 Azerbaijan earthquake is clear to see. However, 
 	\bf
 	\large
 	Authors' Response to Reviewer 2
-	\end{center}
+\end{center}
 
 \noindent
 We thank the reviewer for his/her comments and suggestions, which helped us improve the manuscript. To help the review process, in the annotated manuscript version of the paper, we have highlighted the most relevant changes that resulted from these comments in green font. In the following, we provide a response to each comment. The original comments are in italic black font, followed by our responses in regular blue font.
@@ -112,32 +113,31 @@ We thank the reviewer for his/her comments and suggestions, which helped us impr
 \newline
 
 \introcomment{~}{%
-The authors present an analytical method to estimate statistical properties of earthquake catalogs and they apply their method in Iranian catalog. Although I find some promise in the method I suggest that more analysis is required for the study to be comprehensive. 
+The authors present an analytical method to estimate statistical properties of earthquake catalogs and they apply their method in Iranian catalog. Although I find some promise in the method I suggest that more analysis is required for the study to be comprehensive.
 }
 
-
 \comment{1}{%
-1) Declustering the earthquake catalog, especially using parameters derived for California seismicity under modest monitoring conditions only brings additional uncertainty in the analysis. I am not sure why the authors believe that they should declutter the catalog. They could report if they find any time variability of b-value before/after aftershock sequences. i would suggest not going ahead with declustering.
+Declustering the earthquake catalog, especially using parameters derived for California seismicity under modest monitoring conditions only brings additional uncertainty in the analysis. I am not sure why the authors believe that they should declutter the catalog. They could report if they find any time variability of b-value before/after aftershock sequences. I would suggest not going ahead with declustering.
 }
 
 \response{%
-Thanks for the comment. We consider both catalogs.
+The reviewer brings up an interesting point. For the most part, this is addressed in the response to comment \#1 from Reviewer \#1, who also raised the issue about whether we should decluster the catalog or not. In essence, there is still no clear consensus on what catalog should be used. Telesca et al.~(2014b) and Telesca et al.~(2016) used declustered catalogs, whereas Telesca and Lovallo (2012) and Telesca et al.~(2013) used complete catalogs. We initially declustered the catalog out of personal choice, but in light of the comments we revised the results for both complete and declustered catalogs. We now include both results for Figures 7 and 8, include number of events for noth catalogs in Table 1, and make comments about the differences observed in the treatment of the catalog in several places in the manuscript. We also improved our description of the methodology used for declustering (Gardner and Knopoff, 1974), and made an effort to make it clear that we recognize that this method was calibrated for a different region (California). We now concentrate on the results from the complete catalog.
 }
 
 \comment{2}{%
- Uncertainty analysis for standard b-value estimation for sample population, magnitude correction
+Uncertainty analysis for standard $b$-value estimation for sample population, magnitude correction.
 }
 
 \response{
-Thanks. We conduct the uncertainty analysis according to Shi and Bolt 1982. Please see equation 3 and Table 1. 
+Thanks you. We computed uncertainty according to Shi and Bolt (1982). Please see equation 3 and the results included in the new version of Table 1.
 }
 
 \comment{3}{%
-I find that Mc (magnitude of completeness) determination, should be done in a time-dependent manner since from the Fig. 5 it is obvious that monitoring conditions change.
+I find that $M_c$ (magnitude of completeness) determination, should be done in a time-dependent manner since from the Fig. 5 it is obvious that monitoring conditions change.
 }
 
 \response{
-That is right. We conduct a time dependent Mc estimation through Maximum Curvature method implemented in ZMAP software. Please see Fig. 4.  The results modified accordingly. 
+We agree with the reviewer. We initially used the GFT method because we had issues with the sofware we were using to do this calculation using the MAXC method in a time-dependent manner. For the revised version, we fixzed those issues and were able to recompute $M_c$ using MAXC as impleemted in ZMAP. The new values of $M_c$ are reported in Table 1, and the time dependent analysis is shown in the new version of Figure 4. The new values of $M_c$ resulted to be more conservative than those we obtained in our initial calculation and this resulted in smaller catalogs, which affected some of the analysis (especially in the case of the Kopeh Dagh region). We comment on this in the new version of the manuscript, and proceeded to recompute the results.
 }
 
 \comment{4}{%
@@ -145,8 +145,7 @@ How the Authors account for Bam earthquake in 2003 that has aftershock in the ea
 }
 
 \response{
-Our catalog starts from 2005. We agree the fact that  the earthquake could affect the seismicity pattern several consequent years, however, the spatial distance of the epicenter from the study region is fairly large ($d > 400 miles$). Therefore, we believe $2003 Mw 6.6$ Bam earthquake's aftershocks is not included in the current study regions' catalog.  
+We limite the start date of the catalogs to 2005 because increased quality in monitoring earthquakes in the region around this time has been well documented. While it is possible that the 2003 Bam earthquake had affect the seismicity pattern in subsequent years, we think that the distance of the from the epicenter to the study region ($R > 400 miles$) is sufficiently large not to significantly affect the overall results.
 }
-
 
 \end{document}
