@@ -20,14 +20,6 @@
 % *************************** REVIEWER 1 ***************************
 % ******************************************************************
 
-Here are the main changes:
-
-1) We use the whole catalog instead of declustered catalog
-2) We added also 2016 seismicity
-3) 
-
-
-
 \begin{center}
 	\bf
 	\large
@@ -40,126 +32,67 @@ We thank the reviewer for his/her comments and suggestions, which helped us impr
 \newline
 
 \introcomment{~}{%
-The authors perform a seismic hazard analysis for northern Iran using a newly developed source model from smoothed seismicity. The work is an important contribution to seismic hazard analyses in Iran. Development of the seismic source model follows a careful analysis of the earthquake catalogs for information about spatially varying earthquake rates, maximum magnitudes and b-values. The authors are careful to acknowledge that alternative means for estimating earthquake recurrence - and for other components of the source and ground motion characterization - also exist, and that this work is only one approach for characterizing hazard in the region.
+This is an interesting paper that applies a relatively new technique to the seismicity data in Northern Iran. The manuscript is well-written and would be a worthy contribution to the Pageoph journal. I have a few moderate-to-major concerns that I recommend to be addressed by the authors in a revised manuscript.
 }
 
 \comment{1}{%
-Page 3, Line 71: A short, summary description of previous source models would highlight the contribution of this work. In particular, summary details of the work by Khodaverdian et al should be included to indicate how the approach of the authors differs from previous work.
+Please explain why you decluster the catalog and be more specific on the declustering method/declustering-parameters and the results of the declustering procedure. How many events are in the catalog before/after declustering?
 }
 
 \response{%
-We modified parts of the introduction as well as other sections to highlight in a more explicit manner the differences in our study with respect to other previous efforts. In the case of Khodaverdian et al (2016), the major difference is in the way the seismicity parameters $b$ and $M_{\max}$ are calculated. This is mentioned in the Introduction, and addressed with more clarity in Section 4 (page 11, line 312) and in Section (page 17, line 495). As mentioned there, the difference resides in the fact that Khodaverdian et al (2016) compute seismic parameters for grid cells of size 1\textdegree{} $\times$ 1\textdegree{}. This means the they compile earthquake catalogs for each grid point considering events within 200 km radius from the grid point, whereas we assume the seismic parameters to be uniform for each tectonic seismic region.
+Application of VG approach in the seismic catalog is a novel approach. Recent studies have used both declustered (e.g., Telesca et al (2014b) and Telesca et al (2016)) and the whole catalog (Telesca and Lovallo (2012) and Telesca et al (2013)). Based on this comment and subsequent comment of the reviewer (and also the comments of second reviewers), we consider both whole and declustered catalog. We used Gardner and Knopoff (1974) method for declustering the catalog and reported the catalog size for original data (whole catalog), whole catalog after considering completeness magnitude and also declustered catalog in Table 1.  
 }
 
 \comment{2}{%
-Page 3, line 77: Fault-based/geologic-based earthquake recurrence estimates
+In order to check how well the declustering method worked for the analyzed datasets, would be useful to show the earthquakes in a plot of longitude versus time.
 }
 
 \response{%
-Added, thanks.
+That is a good point. However, we think it gives an idea of distance based analysis of VG which is far from the scope of this article. We add the figure of original catalog before and after considering the completeness magnitude (whole and complete catalogs.)
 }
 
 \comment{3}{%
-Page 4, line 106: Should this be northwest?
+I think would be interesting to check/discuss/compare the k-M slope and b-value relation for both the original and the declustered catalogs.
 }
 
 \response{%
-Yes. Fixed.
+Thanks for the comment. We considered both catalogs and presented the results. Please see Fig. 7. 
 }
 
 \comment{4}{%
-Page 6, line 168: It would be good to add a reference for the GEM effort.
+I would suggest to check the results for several magnitude thresholds above the completeness magnitude. Are the conclusions robust or do they depend on the chosen magnitude thresholds?
 }
 
 \response{%
-We do not have a direct reference to GEM but added a citation to Zare et al (2014), where the connection to GEM is mentioned explicitly.
+The seismicity parameters change based on completeness magnitude. The parameters which come from the VG analysis also follow this pattern. According to this comment and comment \#3 of second reviewer we compute time dependent completeness test and choose a conservative completeness magnitude.  
 }
-
+ 
 \comment{5}{%
-Pages 7--8: Discussion about identifying the completeness level of the earthquake catalogs is a bit confusing. Typically, one either specifies a minimum magnitude of completeness ($M_c$) and then tries to identify the earliest time for which events or complete; or, one specifies a year and computes the corresponding $M_c$. In reading the text, it appears that both methods were used. Please clarify.
+Would it be possible to calculate a correlation coefficient for the $k-M$ slopes and the $b-values$ in Figure 9 (middle plot)?
 }
 
 \response{%
-The new version of the Completeness sub-section now clarifies this point. The reviewer is right in that we used both methods, but we originally did not clearly explain the procedure. We first compute the $b$ and $M_{\max}$ values for each region, or the uniform model, using the HA3 package written by Dr.~Kijko. At this point, $M_c$ is used as an input to the HA3 software. We then used the Seiskit package written by Dr.~Frankel to compute the smoothed seismicity $a$-values. At this point, SeisKit uses the start year of completeness for each magnitude range. Please see changes in page 8, lines 211 and 229.
+We can add the numbers into figure 10. \\
+ (Dec catalog:\ \ \ \   $ k_m :  Az =  4.4\%  Al =  7.1 \%  Ko =  6.6\% -- b: Az = 6.1\%  Al = 3.3\% Ko=4.8\%$)\\
+ (Whole catalog: $ k_m :  Az =  9.4\%  Al =  7.4 \%  Ko =  6.2\% -- b: Az = 5.4\%  Al = 4.8\% Ko=5.5\%$)
 }
 
 \comment{6}{%
-Pages 7--8: The authors should note that some authors use an alternative smoothing kernel $(~exp(-(D/2*sigma)^2)$. Comparison of the smoothing length between different studies may require consideration of a $sqrt(2)$ factor.
+The authors use 20 events (in a moving window) for estimating the b-values and k-M slopes in Figure 9. I think this is an extremely small number and I am concerned about the reliability of the b-value estimates. At least for the areas of higher seismicity the authors should also present graphs obtained using a larger number of events per moving window.
 }
 
 \response{%
-We added a note to this effect in Section 4, and cite the work of Moschetti (2015) as an example. A complete analysis of the smoothing length and its influence on the hazard analysis, however, is out of the scope of the present study. The modifications done can be found in page 10, line 295.
+Thanks for the comment. We tried different window size from 20 to 100. As it is natural to expect, there are trade-offs between different window sizes. Smaller window sizes emphasize the local changes in the time series, but are less reliable when it comes to the seismicity parameters (e.g., b value). Larger window sizes, on the other hand, offer less insight into the time dependence of the window sequence characteristics. We chose a window size $n=50$, which is consistent with the suggested minimum number of events acceptable to estimate b according to  Woessner and Wiemer (2005). We modified the text accordingly. 
 }
 
 \comment{7}{%
-Page 7--8: In addition to the Mirzaei et al (1997) reference, some authors employ likelihood testing of smoothed seismicity rate models to identify optimal smoothing lengths for adaptive and fixed smoothed seismicity methods (e.g., Werner et al., 2011; Moschetti, 2015).
+The discussion of b-values in relation with larger earthquakes (page 10) in Figure 9 is unclear. From a quick visual inspection, I fail to see any distinct anomalies before larger (M > 5.0) events. I think that a lack of correlation should be also discussed in the manuscript, if true.
 }
 
 \response{%
-We included a note to reflect this and added the references suggested by the reviewer. The changes can be seen in page 11, line 304.
+The correlation for 2012 Mw 6.4 Azerbaijan earthquake is clear to see. However, we agree with the reviewer that the drops of b-value is not consistent. Or we should say in the case of big earthquake there is always a drop in b and k-m value, however, there are some drops in the window analysis which is not aligned with big earthquake. We addressed the lack of correlation for the KopehDagh region. We also discussed that the lack of correlation could be the results of relatively high completeness magnitude. The text is modified accordingly.
 }
 
-\comment{7}{%
-Page 9: Kagan and Jackson (1994) should also be included in the reference list.
-}
-
-\response{%
-We added the suggested reference to the list provided in page 10, line 278.
-}
-
-\comment{8}{%
-Page 10, line 302: ``...subjective decisions and any reasonable choice...'' I would disagree that these are subjective decisions. My opinion is that you have applied scientific judgment. You clearly need to communicate where judgment is applied; however:
-\\[5pt]
-Details about the implementation of the two seismicity rate models (U, R) should be expanded. Are sub-catalogs developed for the five separate regions and then used to develop separate a-grids? Presumably, the separate rate files are then used to compute hazard curves and are summed at each location.
-\\[5pt]
-A logic tree would be of great benefit in clarifying how the source models are combined. In particular, it would clarify the weighting from different completeness levels.
-\\[5pt]
-Plots of seismicity rates from the R and U models would be of interest and particularly relevant given that the smoothed seismicity model is the main contribution of this work to hazard analyses for Iran.
-}
-
-\response{%
-The reviewer was right to suggest that our original approach to present a combination of the R and U models was not the best. In the revised manuscript we have addressed this in two basic manners. First, we now provide a better explanation of the rationale behind both models and the reasons to provide a combined result. Second, we adopted the suggestion of implementing a logic tree approach in our analysis. The adopted logic tree allows us to consider the epistemic uncertainty in the defintion of the seismic zones and also allowed us to include uncertainties in the seismic parameters $b$ and $M_{\max}$. For each branch of the logic tree we assigned weights following literature recommendations and our own judgement. In total, traversing and combining the different branches meant to conduct 162 runs ( $3 M_{\max} \times 3 b \times (5 \mbox{regions} + 1 \mbox{uniform}) \times 3 \mbox{GMPE}$) to get the combined results of the 2 basic models (R and U), three values of $b$ and $M_{\max}$ and three GMPE alternatives. The associated changes can be seen in various sections of the revised manuscript, and in particular in the new Section 7 and the Results Section 8.
-}
-
-\comment{9}{%
-Page 14, line 391: The incorporation of smaller earthquakes $(M<5)$ will have a significant influence on the hazard associated with PGA. Recent papers by Atkinson and others have demonstrated this effect. You may wish to argue that $M_{\min}$ was chosen based on the expected smallest magnitude capable of causing damage.
-}
-
-\response{%
-We revised the computations and now present results for events with $M_w > 4.5$. The text was modified accordingly (see page 4, line 94).
-}
-
-\comment{10}{%
-Figure 7: Is the magnitude-frequency distribution just a truncated ($M_{\min}$, $M_{\max}$) Gutenberg-Richter model? Figure 7 suggests that the MFD may be tapered?
-}
-
-\response{%
-Yes, it is truncated Gutenberg-Richter model. We now make this explicit in the caption of the figure.
-}
-
-\comment{11}{%
-Page 12, line 345: ``...controls the spatial extent to which the local occurrence of earthquakes...'' I would argue that the smoothed seismicity controls the local occurrence and spatial distribution of earthquakes and that the GMPEs control the intensity level at a particular site given earthquake locations and magnitudes from your source model.
-}
-
-\response{%
-That is correct. We have modified this sentence accordingly. Please se changes in page 13, line 365.
-}
-
-\comment{12}{%
-Page 13, line 361: Change ``approached'' to ``approach'' and ``lead'' to ``led.''
-}
-
-\response{%
-This part of the text was modified and the requested change may no longer apply, at least in regard to the first suggestion. Regarding the second suggestion, we do not quite agree. Although there was a typo, the way the sentence was structured, the corrected version uses ``leads'' instead.
-}
-
-\comment{13}{%
-The approach to generating Figure 10 should be clarified. It appears that the probabilistic ground motions from the R and U model are averaged and used to compute a standard deviation. The formal method for combining alternative models in PSHA is through the logic tree; this is equivalent to weighting the models in hazard (rate) space, rather than in ground motion (intensity, PGA) space. It appears that the authors have done the latter, though I may be incorrect. If this is the case, please correct. It is very reasonable to combine the R and U models to produce another alternative model. This work is not a comprehensive seismic hazard analysis, and presentation of probabilistic ground motions from the R, U and a weighted model would be reasonable goal. However, I would caution against comparing probabilistic ground motion maps with maps of seismicity because the varying $b$- and $M_{\max}$-values for the R model greatly complicate the comparison. As mentioned earlier, formal testing methods exist for ensuring consistency of observed earthquake locations with the smoothed seismicity models (see CSEP references, Zechar, Schorlemmer, Werner, Helmstetter, Jackson; Moschetti, 2015). Applying these methods is beyond the scope of this work, but might be recognized as a future direction.
-}
-
-\response{%
-Thanks for the informative comment. In the original figure 10 we combined the regional (R) and uniform (U) results (i.e., we combined the probabilities of exceedance, and then computed the PGA) with similar weights (i.e., 0.5). The positive and negative standard deviation plots came from GMPE + Uncertainty and GMPE -- Uncertainty. Our original intention was to show the range of variation for PGA around the median value. However, in the revised version of the manuscript this is no longer done. The new figure corresponding to the (R,U) combined model (Fig.~12) is now the result of the complete logic tree analysis, which is a more appropriate approach to presenting the results of our analysis.
-}
 
 % ******************************************************************
 % *************************** REVIEWER 2 ***************************
@@ -179,357 +112,41 @@ We thank the reviewer for his/her comments and suggestions, which helped us impr
 \newline
 
 \introcomment{~}{%
-Review of Seismic Hazard Estimation of Northern Iran Using Smoothed Seismicity by Naeem Khoshnevis, Ricardo Taborda, Shima Azizzadeh-Roodpish, and Chris H. Cramer
+The authors present an analytical method to estimate statistical properties of earthquake catalogs and they apply their method in Iranian catalog. Although I find some promise in the method I suggest that more analysis is required for the study to be comprehensive. 
 }
 
-\introcomment{~}{%
-In this paper, the researchers present a new seismic hazard analysis of northern Iran. The paper makes use of the latest available data and methods, is thorough in its review of previous work, and is very well presented and written. I have a few suggestions that I think would improve the impact of their results. The annotated version of the manuscript contains additional and more specific suggestions.
-}
 
 \comment{1}{%
-The authors present uncertainty in their hazard estimate but do not include a more exhaustive logic tree analysis. Effectively, they have two branches: a regional model and uniform model. It appears that they apply the aleatory uncertainty in the ground motion prediction relation to a form of epistemic uncertainty, effectively double counting this uncertainty in the hazard analysis. I would prefer to see a more standard logic tree analysis where multiple GMPEs (or a backbone plus and minus one standard deviation) and uncertainty in $a$-value, $b$-value, and $M_{\max}$, for example, are considered. Barring this analysis, I would remove figure 10 and references to hazard uncertainty.
-}
-
-\response{Thanks for the comment. Based on explanation of GMPEs section (please also see comment No.~27) we decided to address uncertainty with a backbone GMPE plus and minus one standard deviation. We also consider uncertainty in tectonic seismic regions through variations in the seismicity parameters $M_{\max}$, $b$, and combine the results using a standard logic tree analysis, as suggested. These changes are reflected at various points throughout the revised manuscript.}
-
-\comment{2}{%
-While I think that the regional and uniform models are generally correct within 1.5 degrees of the border, I think that outside of this region, they may be moderately underestimating hazard by not considering sources with 200 km of their region of interest. Their buffer zone for sources is presently 50 km.
-}
-
-\response{That is right. We increased the buffer zone up to 2 degrees. See page 4, line 100.}
-
-\comment{3}{%
-It would be good if the abstract is more specific about the results. Where is the hazard greatest? What sources contribute to regions of higher hazard?
-}
-
-\response{We modified the abstract accordingly, but do not provide too much detail as that would significantly increase the length of the abstract, which is not desirable. See new lines 23--25.}
-
-\comment{4}{%
-In the second paragraph of the introduction, I would include a reference to a figure of the region to help readers less familiar with the area. This figure should also be referred to in subsequent paragraphs. It is probably sufficient to move reference to figure 1 here.
-}
-
-\response{We added a reference to figure 1 in page 2, line 40.}
-
-\comment{5}{%
-Line 39: eight $\to$ eighth
-}
-
-\response{Fixed.}
-
-\comment{6}{%
-Line 55: focuses in $\to$ focuses on
-}
-
-\response{Done. Thanks.}
-
-\comment{7}{%
-Line 56: Please be more specific about how your analysis differs from previous analyses.
-}
-
-\response{We modified the introduction to better explain the method and parameters. However, there are some details we still believe go better within the subsequent sections. Changes correspond to lines 54 to 76.}
-
-\comment{8}{%
-Line 60: Can you be more specific? What are the other indicators?
-}
-
-\response{In hindsight that was not the best choice of words. Since we modified this part of the introduction, the new text does no longer includes this sentence.}
-
-\comment{9}{%
-Line 71: Include reference.
-}
-
-\response{Done. Thanks.}
-
-\comment{10}{%
-Line 78: reduce $\to$ acknowledge
-}
-
-\response{Fixed.}
-
-\comment{11}{%
-Line 99: Is 0.5 degrees enough? To what distance do you do your ground motion calculations? In the western United States, they are done to 200 km. In the central and eastern, they are done to 1000 km. Depending on this value, you should include sources up to this distance from your region of interest.
-}
-
-\response{We reanalyze the hazard with 2 degrees buffer zone. This is reflected in the new Figures 1 and 3, and in the text (line 100) as well as, of course, in the results.}
-
-\comment{12}{%
-Line106: northeast $\to$ northwest
-}
-
-\response{Done. Thanks}
-
-\comment{13}{%
-Line 114: There is no previous mention of this earthquake. I am not sure to which earthquake you are referring. Should either the 1721 or 1780 earthquakes be the Shebli earthquake?
-}
-\response{Thanks for the comment. It is the 26 April 1721 $M_s$ 7.7 earthquake. The change is now in page 4, line 114.}
-
-\comment{14}{%
-Line 180: The smaller events should also help to inform the G-R relationship.
-}
-
-\response{Thanks for the comment. Added to the text in line 182.}
-
-\comment{15}{%
-Line 182: How come this study doesn't appear in Table 3. Do they not calculate PGA for 2 and 10\% exceedance in 50 years?
-}
-
-\response{They did not provide a numerical value, or numbers on the contour lines. However, we read the images with Matlab and located the values and now include them in the new version of Table 3.}
-
-\comment{16}{%
-Line 192: What is the total number of events before and after declustering?
-}
-
-\response{Number of events before decluttering: 10,441; total foreshocks: 971; total aftershocks: 4,206; declustered data: 5,254. It should be noted that these numbers are representing the events in the complete study region (including the buffer zone). It partly includes events from Central and Zagros region. For the completeness, we studied the whole data for each region. This is now explained in page 7, line 195.}
-
-\comment{17}{%
-Line 224: Why did you use this method? What are the benefits of one or the other?
-}
-
-\response{Both methods have been used extensively in previous studies. We just picked one, mainly so due to ease of implementation, which also allowed us to have complete control over the final selection. The text was incorrectly implying that the goodness-of-fit rest method had benefits over the MAXC method. We fixed this and now state our reasons in a more transparent way. See page 8, line 229.}
-
-\comment{18}{%
-Line 232: It is unclear how you chose $M_c$. In some cases, it looks like you chose the peak goodness-of-fit value, but in others you did not. Please be more specific about how Mc was chosen.
-}
-
-\response{According to Wiemer and Wyss (2000), the priority is picking the magnitude which has the peak goodness-of-fit value. However, in some cases for two or a couple of magnitudes the goodness-of-fit scores are not considerably different. In these cases, we pick the minimum magnitude, even though it does not have the peak goodness-of-fit value, in order to preserve more data. We also consider the decay of the cumulative number of events. This is now explained in the revised manuscript in pages 8 and 9.}
-
-\comment{19}{%
-Line 267: add 'and'
-}
-\response{Added. Thanks.}
-
-\comment{20}{%
-Line 289: You might also cite the 2014 USGS National Model (Petersen et al., 2014) and the Afghanistan seismic hazard maps (Boyd et al, 2007), which include spatial variability in the smoothing parameter.
-}
-
-\response{We included the suggested reference, though the actual publication year is 2015.}
-
-\comment{21}{%
-Line 297: provided below $\to$ provided in the next section.
-}
-
-\response{Fixed.}
-
-\comment{22}{%
-Line 300: allows to draw information $\to$ allows one to draw information
-}
-
-\response{Done.}
-
-\comment{23}{%
-Line 323: Be more specific about how HA3 computes $b$ and $M_{\max}$. What is its method?
-}
-
-\response{This code uses the procedure described in Kijko and Sellevoll (1989). We added a sentence making this explicit in page 12, line 341.}
-
-\comment{24}{%
-Line 335: Different seismic zone will not necessarily have difference values of $b$ and $M_{\max}$. Change to this: Different seismic zone may have different values of $b$ and $M_{\max}$.
-}
-
-\response{Modified. Thanks. See line 354.}
-
-\comment{25}{%
-Line 337: a means to reduce epistemic $\to$ a means to account for epistemic
-}
-
-\response{Done.}
-
-\comment{26}{%
-Line 361: lead $\to$ leads
-}
-
-\response{Fixed. Thanks.}
-
-\comment{27}{%
-Line 364: How do you address the epistemic uncertainty generally introduced by using a suite of GMPEs?
-}
-
-\response{This is a point that was also raised by Reviewer 1. As mentioned in Atkinson and Adam (2013) and Atkinson et al (2014), using different GMPEs with different logic tree weights from different literature is not necessarily the best way to model the epistemic uncertainty in GMPEs. Especially when the mean of various GMPEs are too close to each other. We prefer to use the alternative GMPEs and applicable data to guide the choice of a representative or central GMPE, and to define representative upper and lower GMPEs using the standard deviation of the chosen relationship. In order to address these concerns we now use the logic tree scheme shown in Fig.~9 and make comments with respect to this in various points throughout the revised version of the manuscript, but in particular in pages 13 and 14, lines 380--397.}
-
-\comment{28}{%
-Line 365: add 'and'
-}
-
-\response{Added. Thanks.}
-
-\comment{29}{%
-Line 370: Could you consider other depths to help fill out your range of epistemic uncertainty?
-}
-
-\response{Not really. At least we think it would not be appropriate to do so. The Kalkan and Gulkan (2004) attenuation relationship was originally generated for Turkey. Later, Zafarani and Mousavi (2014) found that this GMPE yielded acceptable results for PGA for northern Iran if calibrated with the values we report in the manuscript. Since the high accuracy achieved by using this GMPE depends on the the current choice of depth, we ignore what would be the effect of considering the variability of $h$, and suspect it will likely be to the detriment of the analysis. We make tangential mention to this in the new Section 7. See page 15, line 424.}
-
-\comment{30}{%
-Line 371: How does this value compare with the models you decided not to use?
-}
-
-\response{In the revised version we use a backbone GMPE, in addition to GMPEs derived using plus and minus one standard deviation. Therefore, this comment does no longer apply.}
-
-\comment{31}{%
-Line 376: In this case, you should consider all sources with 200 km of your area of interest.
-}
-\response{We modified the buffer zone and now do this. Thanks.}
-
-\comment{32}{%
-Line 394: 50-years $\to$ 50-year
-}
-\response{Done.}
-
-\comment{33}{%
-Line 420: with concentration $\to$ with a concentration
-}
-
-\response{Added. Thanks.}
-
-\comment{34}{%
-Line 422: I would have stated this differently. It looks like the lower $b$-value in Kopeh Dagh yields relatively high hazard in the R model whereas in the U model, this low b-value has leaked into the entire region and subsequently elevated seismic hazard in all areas outside of Kopeh Dagh.
-}
-
-\response{Based on the modification in GMPEs and uncertainties, we rewrote this description.}
-
-\comment{35}{%
-Line 428: Why equal weights?
-}
-
-\response{We added a comprehensive logic tree analysis and modified the weights. Please see figure 9, and the description given in the new Section 7.}
-
-\comment{36}{%
-Line 431: I'm not sure I quite understand this. The standard deviation in the attenuation relation is considered aleatory uncertainty and is present within the hazard curve. Adding it as epistemic as well will cause double counting. If you want to include figure 10, a proper logic tree analysis to include more forms of epistemic uncertainty should be performed. For example, add branches for uncertainty in which GMPE you choose, uncertainty in $b$-value, uncertainty in $M_{\max}$, uncertainty in $a$-value, uncertainty in smoothing parameter, etc.
-}
-
-\response{We modified the approach and now consider the uncertainties explicitly via a logic tree analysis. Therefore, we believe this no longer applies as the new approach is more appropriate.}
-
-\comment{37}{%
-Line 434: Just because the basic pattern appears to better follow faults in the region does not mean it's a better assessment, especially if the $b$-values are truly different between regions and better represented by the regional analysis.
-}
-
-\response{Agree. We believe, however, that this can be interpreted as a good indication of how the data is being captured by the analysis. We modified this.}
-
-\comment{38}{%
-Line 439: of city of Tabriz $\to$ of the city of Tabriz.
-}
-
-\response{Fixed. Thanks.}
-
-\comment{39}{%
-Line 450: for 2 and 10\%, respectively $\to$ for 2 and 10\% in 50 years, respectively.
-}
-
-\response{Done.}
-
-\comment{40}{%
-Line 453: for a 10\% probability of exceedance $\to$ for a 10\% probability of exceedance in 50 years.
-}
-
-\response{Done.}
-
-\comment{41}{%
-Line 455: 0.27--0.31 g for 10\% probability of exceedance $\to$ 0.27-0.31 g for the same exceedance probability
-}
-
-\response{Done.}
-
-\comment{42}{%
-Line 458: for 2 and 10\% $\to$ for 2 and 10\% in 50 years
-}
-
-\response{Done.}
-
-\comment{43}{%
-Line 461: our results are close or within $\to$ our results are close to or within
-}
-
-\response{Done.}
-
-\comment{44}{%
-Line 462: Can you explain the differences in their analysis relative to yours that lead to higher values?
-}
-
-\response{They used Maximum Credible Earthquake as $M_{\max}$. The maximum credible earthquake is largest earthquake that appears capable of occurring under the known tectonic framework for a specific fault or seismic source, as based on geologic and seismologic data, so it is higher than observation or data driven $M_{\max}$. We added the explanation to the text (see page 18, line 511).}
-
-\comment{45}{%
-Line 466: exceedance as functions of PGA $\to$ exceedance as functions of PGA, also known as hazard curves}
-
-\response{Done.}
-
-\comment{46}{%
-Line 475: Can you explain the differences in the hazard analysis that led to differences in hazard?}
-
-\response{We modified this paragraph and included a better description of the differences and results. See pages 18 and 19, lines 524--549.}
-
-\comment{47}{%
-Line 488: Not sure you can say this because you don't include fault specific sources, and you do not consider a more full range of epistemic uncertainty, e.g. you only use one GMPE (though you do consider two $b$-value and $M_{\max}$ based models).
-}
-
-\response{That is right. We restate the sentence and modified the conclusions accordingly.}
-
-\comment{48}{%
-Line 488: hazard analysis $\to$ hazard analyses
-}
-
-\response{Done.}
-
-\comment{49}{%
-Line 490: models as a mean $\to$ models as a means}
-
-\response{Done.}
-
-\comment{50}{%
-Line 493: Though you suggest the uniform model is unrealistic on line 334.
-}
-
-\response{Our choice of words was not the best. We meant to say less realistic. We fixed the text accordingly.}
-
-\comment{51}{%
-Line 502: for providing advise $\to$ for providing advice}
-\response{Done.}
-
-\comment{52}{%
-Line 509: Should this be Sunset?
-}
-
-\response{Yes. Thank you.}
-
-\comment{53}{%
-Page 25, Table 2: What did you do for the earthquakes occurring outside of these five zones?
-}
-
-\response{
-As it can be seen in Figure 1, earthquakes outside the regions would be too far to be included. There are earthquakes above the Caspian see, for instance, and others in the country of Azerbaijan which were ignored because they were beyond the buffer zone (which as it was mentioned before, was expanded).}
-
-\comment{54}{%
-Page 26, Table 3: Specify units.}
-
-\response{Done. Thanks.}
-
-\comment{55}{%
-Page 32, Figure 3: You should also show events in the buffer zone used to compute hazard.}
-
-\response{Done.}
-
-\comment{56}{%
-Page 34, Figure 5: Which seismic zone corresponds to which color? It looks like either reporting or rates have changed over time. For example, I might argue that the red region was not complete for M3 and above until 2005.
+1) Declustering the earthquake catalog, especially using parameters derived for California seismicity under modest monitoring conditions only brings additional uncertainty in the analysis. I am not sure why the authors believe that they should declutter the catalog. They could report if they find any time variability of b-value before/after aftershock sequences. i would suggest not going ahead with declustering.
 }
 
 \response{%
-Thanks for the comment. The problem with that region is having less than and equal sign on magnitude 4. There are many earthquakes go to that category because of that condition. Since converting earthquake magnitude always has an error margin, we think the comment is relevant. Based on the data we assume 2005 as a completeness magnitude. We presented the legends at the bottom of the figure.
+Thanks for the comment. We consider both catalogs.
 }
 
-\comment{57}{%
-Page 37: 10 percent of probability $\to$ 10 percent probability
+\comment{2}{%
+ Uncertainty analysis for standard b-value estimation for sample population, magnitude correction
 }
 
-\response{Done.}
-
-\comment{58}{%
-Page 39, Figure 11: Include horizontal lines indicating 2 and 10\% probability of exceedance in 50 years.
+\response{
+Thanks. We conduct the uncertainty analysis according to Shi and Bolt 1982. Please see equation 3 and Table 1. 
 }
 
-\response{Included.}
-
-\comment{59}{%
-Page 41, Figure 12: Can you include curves or points for the other studies in Table 3?
+\comment{3}{%
+I find that Mc (magnitude of completeness) determination, should be done in a time-dependent manner since from the Fig. 5 it is obvious that monitoring conditions change.
 }
 
-\response{We did and made comments about this in the Results section.}
+\response{
+That is right. We conduct a time dependent Mc estimation through Maximum Curvature method implemented in ZMAP software. Please see Fig. 4.  The results modified accordingly. 
+}
+
+\comment{4}{%
+How the Authors account for Bam earthquake in 2003 that has aftershock in the early part of their catalog?
+}
+
+\response{
+Our catalog starts from 2005. We agree the fact that  the earthquake could affect the seismicity pattern several consequent years, however, the spatial distance of the epicenter from the study region is fairly large ($d > 400 miles$). Therefore, we believe $2003 Mw 6.6$ Bam earthquake's aftershocks is not included in the current study regions' catalog.  
+}
+
 
 \end{document}
